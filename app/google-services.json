@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "992201596487",
+    "project_id": "client-app-1286"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992201596487:android:f9da39d8adc1bcfd",
+        "android_client_info": {
+          "package_name": "com.nicholasgot.clientapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCbuveP6x0trfRW0_zyS4SzJKU-114LPc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
