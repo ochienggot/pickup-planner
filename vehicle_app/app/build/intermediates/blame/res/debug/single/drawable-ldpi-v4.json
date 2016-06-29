@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/selected_parking_place.png",
+        "source": "/Users/ngot/Desktop/Project/app/src/main/res/drawable-ldpi/selected_parking_place.png"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/project_icon.png",
+        "source": "/Users/ngot/Desktop/Project/app/src/main/res/drawable-ldpi/project_icon.png"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/parking_place.png",
+        "source": "/Users/ngot/Desktop/Project/app/src/main/res/drawable-ldpi/parking_place.png"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/user_position_marker.png",
+        "source": "/Users/ngot/Desktop/Project/app/src/main/res/drawable-ldpi/user_position_marker.png"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
+    }
+]

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nicholasgot.citypulse.androidapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="22" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ericsson_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.nicholasgot.citypulse.androidapp.MainActivity" >
+
+            <!-- android:icon="@drawable/ericsson_logo" -->
+            <!-- android:label="" > -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.ParkingPlaceConstraintsActivity"
+            android:icon="@drawable/ericsson_logo"
+            android:label=""
+            android:parentActivityName="com.nicholasgot.citypulse.androidapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicholasgot.citypulse.androidapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.SettingsActivity"
+            android:parentActivityName="com.nicholasgot.citypulse.androidapp.MainActivity" />
+
+        <!-- developer -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBkvdlYIMFK3ZpN0nTAaJKehRpKZJolc_Y" />
+
+        <!-- release -->
+        <!--
+            meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value=" AIzaSyBZrdk5KJXqWEFJgi3g9PD9-59aGVXBIWk" /
+        -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.TravelPlannerConstraintsActivity"
+            android:icon="@drawable/project_icon"
+            android:label="" />
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.ErrorPanel"
+            android:icon="@drawable/project_icon"
+            android:label="" />
+
+        <service android:name="com.nicholasgot.citypulse.androidapp.ParkingNotificationService" />
+        <service android:name="com.nicholasgot.citypulse.androidapp.TravelNotificationService" />
+        <service android:name="com.nicholasgot.citypulse.androidapp.TravelStatusService" />
+
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.TravelPlannerRouteSelection"
+            android:icon="@drawable/project_icon"
+            android:label="" />
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.Execution"
+            android:icon="@drawable/project_icon"
+            android:label="" />
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.ParkingPlaceSelectionActivity"
+            android:icon="@drawable/project_icon"
+            android:label="" />
+
+        <service
+            android:name="it.unical.mat.embasp.dlv.DLVService"
+            android:exported="false"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.nicholasgot.citypulse.androidapp.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+    </application>
+
+</manifest>

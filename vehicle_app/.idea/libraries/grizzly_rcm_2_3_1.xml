@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="grizzly-rcm-2.3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/grizzly-rcm-2.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

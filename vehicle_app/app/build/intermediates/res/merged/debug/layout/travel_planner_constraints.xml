@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nicholasgot.citypulse.androidapp.TravelPlannerConstraintsActivity" >
+
+    <TextView
+        android:id="@+id/trafficText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/routeConstraintsTitle"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/traffic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/trafficPlannerConstraintsFastestCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/trafficText"
+        android:layout_below="@+id/trafficText"
+        android:layout_marginLeft="33dp"
+        android:text="@string/fastets" />
+
+    <CheckBox
+        android:id="@+id/trafficPlannerConstraintsShortestCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/trafficPlannerConstraintsFastestCheckBox"
+        android:layout_below="@+id/trafficPlannerConstraintsFastestCheckBox"
+        android:text="@string/Shortest" />
+
+    <TextView
+        android:id="@+id/airPollutionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/trafficText"
+        android:layout_below="@+id/trafficPlannerConstraintsShortestCheckBox"
+        android:text="@string/air_pollution"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/trafficPlannerConstraintsCleannerCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/trafficPlannerConstraintsShortestCheckBox"
+        android:layout_below="@+id/airPollutionText"
+        android:text="@string/Cleaner" />
+
+    <TextView
+        android:id="@+id/routeConstraintsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/route_constraints"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/travelPlannerConstraintsSaveButton"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="Save" />
+
+</RelativeLayout>

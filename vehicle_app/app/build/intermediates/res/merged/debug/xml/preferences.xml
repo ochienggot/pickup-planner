@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="pref_latency"
+        android:title="@string/pref_latency"
+        android:dialogTitle="@string/pref_latency"
+        android:defaultValue="5000" />
+
+    <EditTextPreference
+        android:key="pref_price"
+        android:title="@string/pref_price"
+        android:dialogTitle="@string/pref_price"
+        android:defaultValue="5000" />
+
+    <EditTextPreference
+        android:key="pref_security_level"
+        android:title="@string/pref_security_level"
+        android:dialogTitle="@string/pref_security_level"
+        android:defaultValue="1" />
+
+    <EditTextPreference
+        android:key="pref_accuracy"
+        android:title="@string/pref_accuracy"
+        android:dialogTitle="@string/pref_accuracy"
+        android:defaultValue="0" />
+
+    <EditTextPreference
+        android:key="pref_completeness"
+        android:title="@string/pref_completeness"
+        android:dialogTitle="@string/pref_completeness"
+        android:defaultValue="0" />
+
+    <EditTextPreference
+        android:key="pref_bandwidth"
+        android:title="@string/pref_bandwidth"
+        android:dialogTitle="@string/pref_bandwidth"
+        android:defaultValue="500" />
+
+</PreferenceScreen>

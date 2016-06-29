@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <fragment
+        android:id="@+id/ParkingPlacePlannerMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/parkingPlacePlannerOKButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/parkingPlaceSelectionTextField" />
+
+    <com.nicholasgot.citypulse.androidapp.autocompletetext.CustomAutoCompleteTextView
+        android:id="@+id/parkingPlaceSelectionTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:ems="14"
+        android:hint="@string/default_current_location_text"
+        android:inputType="textPostalAddress" />
+
+    <Button
+        android:id="@+id/parkingPlacePlannerOKButton"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ParkingPlacePlannerMap"
+        android:layout_alignParentBottom="true"
+        android:text="@string/ok_button" />
+
+    <Button
+        android:id="@+id/parkingPlaceconstraintsButton"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ParkingPlacePlannerMap"
+        android:text="@string/constraints_button" />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.nicholasgot.citypulse.androidapp"
+        minSdkVersion 21
+        targetSdkVersion 22
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'res/color/common_google_signin_btn_text_dark.xml'
+        exclude 'res/color/common_google_signin_btn_text_light.xml'
+        exclude 'res/color/common_plus_signin_btn_text_light.xml'
+        exclude 'res/color/common_plus_signin_btn_text_dark.xml'
+        exclude 'res/drawable/common_google_signin_btn_text_dark.xml'
+        exclude 'res/drawable/common_google_signin_btn_text_light.xml'
+        exclude 'res/drawable/common_plus_signin_btn_text_dark.xml'
+        exclude 'res/drawable/common_plus_signin_btn_text_light.xml'
+        exclude 'res/drawable/common_google_signin_btn_icon_light.xml'
+        exclude 'res/drawable/common_google_signin_btn_icon_dark.xml'
+        exclude 'res/drawable/common_plus_signin_btn_icon_light.xml'
+        exclude 'res/drawable/common_plus_signin_btn_icon_dark.xml'
+        exclude 'res/color/wallet_primary_text_holo_light.xml'
+        exclude 'res/color/wallet_secondary_text_holo_dark.xml'
+        exclude 'res/color/wallet_secondary_text_holo_dark.xml'
+    }
+
+}
+
+dependencies {
+    compile files('libs/commons-0.0.1-SNAPSHOT.jar')
+    compile files('libs/grizzly-framework-2.3.15-gfa.jar')
+    compile files('libs/grizzly-http-2.3.15-gfa.jar')
+    compile files('libs/grizzly-http-server-2.3.15-gfa.jar')
+    compile files('libs/grizzly-rcm-2.3.1.jar')
+    compile files('libs/javax.json-api-1.0.jar')
+    compile files('libs/javax.websocket-api-1.1.jar')
+    compile files('libs/tyrus-client-1.10.jar')
+    compile files('libs/tyrus-container-grizzly-1.2.1.jar')
+    compile files('libs/tyrus-container-grizzly-client-1.10.jar')
+    compile files('libs/tyrus-container-grizzly-server-1.10.jar')
+    compile files('libs/tyrus-core-1.10.jar')
+    compile files('libs/tyrus-server-1.10.jar')
+    compile files('libs/tyrus-spi-1.10.jar')
+    compile files('libs/tyrus-websocket-core-1.0.jar')
+    compile project(':embasp')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.google.android.gms:play-services-maps:9.0.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+}
