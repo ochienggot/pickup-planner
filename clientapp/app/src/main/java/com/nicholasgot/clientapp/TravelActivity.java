@@ -3,57 +3,42 @@ package com.nicholasgot.clientapp;
 import android.Manifest;
 import android.app.DialogFragment;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
-import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.model.LatLng;
+import com.nicholasgot.clientapp.utils.DatabaseConnection;
+import com.nicholasgot.clientapp.utils.GeocodeLocationTask;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
+/**
+ * Travel Details Activity
+ */
 public class TravelActivity extends AppCompatActivity {
     public static final String LOG_TAG = TravelActivity.class.getSimpleName();
     public final int MY_PERMISSIONS_ACCESS_LOCATION = 123;
 
-    public final String MY_LOCATION = "Use my location";
-    public final String DEFAULT_LOCATION = "Uppsala";
-
-    private String sourceLocation;
     private String destLocation;
 
-    private EditText mEditText;
     private Spinner mSpinner;
     private GeocodeLocationTask geoCode;
 
@@ -126,11 +111,13 @@ public class TravelActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        // Initialize to airports option
+        // Initialize destination to airports option
         Spinner spinner = (Spinner) findViewById(R.id.events_spinner);
         updateSpinnerAdapter(spinner, R.array.dst_airport);
         RadioButton buttonAirport = (RadioButton) findViewById(R.id.radio_airport);
-        buttonAirport.toggle();
+        if (buttonAirport != null) {
+            buttonAirport.toggle();
+        }
     }
 
     @Override
@@ -201,7 +188,7 @@ public class TravelActivity extends AppCompatActivity {
 
     /**
      * Present a dialog to the user to enable them pick the date of travel
-     * @param view
+     * @param view view
      */
     public void showDatePickerDialog(View view) {
         DialogFragment newFragment = new DatePickerFragment();
@@ -246,11 +233,6 @@ public class TravelActivity extends AppCompatActivity {
         }
     }
 
-    public void geoCodeLocation(String loc) {
-        geoCode = new GeocodeLocationTask(loc);
-        geoCode.doInBackground();
-    }
-
     /**
      * Write travel request to database
      */
@@ -266,10 +248,11 @@ public class TravelActivity extends AppCompatActivity {
     /**
      * Send to the database
      */
-    private void postRequestToDatabase() {
+    protected void postRequestToDatabase() {
         DatabaseConnection db = new DatabaseConnection();
-        LatLng src = locations.get(sourceLocation);
+//        LatLng src = locations.get(sourceLocation);
         LatLng dst = locations.get(destLocation);
+        LatLng src = TravelActivityFragment.destinationPoint;
 
         if (src == null || dst == null) {
             Toast.makeText(this, "Errors occurred while Geocoding pickup or destination locations.", Toast.LENGTH_LONG).show();

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 public class EventsActivity extends AppCompatActivity {
+    // TODO: add functionality
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +22,13 @@ public class EventsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Toast.makeText(this, "Displays a list of events happening nearby", Toast.LENGTH_LONG).show();

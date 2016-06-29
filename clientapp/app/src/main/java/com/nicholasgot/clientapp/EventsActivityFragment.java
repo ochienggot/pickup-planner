@@ -7,10 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 /**
- * A placeholder fragment containing a simple view.
+ * Fragment for Events Activity class
  */
 public class EventsActivityFragment extends Fragment {
 

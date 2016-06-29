@@ -1,5 +1,7 @@
 package com.nicholasgot.clientapp.autocomplete;
 
+import com.nicholasgot.clientapp.utils.LocationDetails;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by ngot on 29/06/2016.
+ * Parse Json object TODO: better documentation
  */
 public class SimpleGeocodeJsonParser {
 
@@ -31,13 +33,12 @@ public class SimpleGeocodeJsonParser {
 
     private List<HashMap<String, String>> getPlaces(JSONArray jPlaces){
         int placesCount = jPlaces.length();
-        List<HashMap<String, String>> placesList = new ArrayList<HashMap<String,String>>();
-        HashMap<String, String> place = null;
+        List<HashMap<String, String>> placesList = new ArrayList<>();
+        HashMap<String, String> place;
 
         /** Taking each place, parses and adds to list object */
-        for(int i=0; i<placesCount;i++){
+        for(int i = 0; i<placesCount;i++){
             try {
-                /** Call getPlace with place JSON object to parse the place */
                 place = getPlace((JSONObject)jPlaces.get(i));
                 placesList.add(place);
 
@@ -52,23 +53,31 @@ public class SimpleGeocodeJsonParser {
     /** Parsing the Place JSON object */
     private HashMap<String, String> getPlace(JSONObject jPlace){
 
-        HashMap<String, String> place = new HashMap<String, String>();
+        String FORMATTED_ADDRESS = "formatted_address";
+        String GEOMETRY = "geometry";
+        String LOCATION = "location";
+
+        HashMap<String, String> place = new HashMap<>();
         String formatted_address = "-NA-";
-        String lat="";
-        String lng="";
+        String lat;
+        String lng;
 
         try {
             // Extracting formatted address, if available
-            if(!jPlace.isNull("formatted_address")){
-                formatted_address = jPlace.getString("formatted_address");
+            if(!jPlace.isNull(FORMATTED_ADDRESS)){
+                formatted_address = jPlace.getString(FORMATTED_ADDRESS);
             }
 
-            lat = jPlace.getJSONObject("geometry").getJSONObject("location").getString("lat");
-            lng = jPlace.getJSONObject("geometry").getJSONObject("location").getString("lng");
+            lat = jPlace.getJSONObject(GEOMETRY)
+                    .getJSONObject(LOCATION)
+                    .getString(LocationDetails.LATITUDE);
+            lng = jPlace.getJSONObject(GEOMETRY)
+                    .getJSONObject(LOCATION)
+                    .getString(LocationDetails.LONGITUDE);
 
-            place.put("formatted_address", formatted_address);
-            place.put("lat", lat);
-            place.put("lng", lng);
+            place.put(FORMATTED_ADDRESS, formatted_address);
+            place.put(LocationDetails.LATITUDE, lat);
+            place.put(LocationDetails.LONGITUDE, lng);
 
         }catch (JSONException e) {
             e.printStackTrace();

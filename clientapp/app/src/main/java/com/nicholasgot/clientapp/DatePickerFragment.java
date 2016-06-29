@@ -4,20 +4,16 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.net.ContentHandler;
 import java.util.Calendar;
 
 /**
- * Created by ngot on 21/04/2016.
+ * Pick date from a calendar
  */
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
     public static final String LOG_TAG = DatePickerFragment.class.getSimpleName();
-    private String mDay;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -33,7 +29,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with date chosen
-        mDay = "Date: " + day + "/" + month + "/" + year + "    ";
+        String mDay = "Date: " + day + "/" + month + "/" + year + "    ";
 
         TextView textView = (TextView) getActivity().findViewById(R.id.text_view_date);
         textView.setText(mDay);

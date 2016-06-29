@@ -20,9 +20,10 @@ import com.nicholasgot.clientapp.gcm.MyPreferences;
 import com.nicholasgot.clientapp.gcm.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
+
     private final static String LOG_TAG = MainActivity.class.getSimpleName();
-    private boolean mRadioTravel;
-    private boolean mRadioEvent;
+//    private boolean mRadioTravel;
+//    private boolean mRadioEvent;
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private boolean isReceiverRegistered;
@@ -136,16 +137,16 @@ public class MainActivity extends AppCompatActivity {
                 if (checked) {
                     Intent travelIntent = new Intent(getApplicationContext(), TravelActivity.class);
                     startActivity(travelIntent);
-                    mRadioTravel = true;
-                    mRadioEvent = false;
+//                    mRadioTravel = true;
+//                    mRadioEvent = false;
                 }
                 break;
             case R.id.radio_attend_event:
                 if (checked) {
                     Intent eventIntent = new Intent(getApplicationContext(), EventsActivity.class);
                     startActivity(eventIntent);
-                    mRadioEvent = true;
-                    mRadioTravel = false; // TODO: handle this better
+//                    mRadioEvent = true;
+//                    mRadioTravel = false; // TODO: handle this better
                 }
         }
     }

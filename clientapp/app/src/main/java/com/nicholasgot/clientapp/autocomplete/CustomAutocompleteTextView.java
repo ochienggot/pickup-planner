@@ -16,8 +16,9 @@ public class CustomAutocompleteTextView extends AutoCompleteTextView {
         super(context,attrs);
     }
 
+    @SuppressWarnings("unchecked")
     protected CharSequence convertSelectionToString(Object selectedItem) {
-        HashMap<String,String> hm = (HashMap<String, String>) selectedItem;
+        HashMap<String, String> hm = (HashMap<String, String>) selectedItem;
         return hm.get(DESCRIPTION);
     }
 }

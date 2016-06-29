@@ -25,7 +25,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.Manifest;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -34,28 +33,17 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
-import com.nicholasgot.clientapp.autocomplete.CustomAutocompleteTextView;
 import com.nicholasgot.clientapp.autocomplete.GeocodeJsonParser;
 import com.nicholasgot.clientapp.autocomplete.PlaceDetailsJsonParser;
 import com.nicholasgot.clientapp.autocomplete.SimpleGeocodeJsonParser;
+import com.nicholasgot.clientapp.utils.NetworkAndLocationServices;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -88,7 +76,8 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
 
     final static int PLACES = 0;
     final static int PLACES_DETAILS = 1;
-    private LatLng destinationPoint = null;
+
+    protected static LatLng destinationPoint = null;
 
     public static final String LATITUDE = "lat";
     public static final String LONGITUDE = "lng";
@@ -146,7 +135,7 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
                     public boolean onEditorAction(TextView v, int actionId,
                                                   KeyEvent event) {
 
-                        if (!ApplicationExecutionConditions
+                        if (!NetworkAndLocationServices
                                 .isInternetSignal(getActivity())) {
                             return false;
                         }
@@ -517,7 +506,7 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
 
                     destinationPoint = new LatLng(endPointLatitude,
                             endPointLongitude);
-                    // Call database and write these details
+                    // TODO: Call database and write these details
 //                    displayMarkerAtLocationAndZoomIn(destinationPoint);
 
                     InputMethodManager inputManager = (InputMethodManager) getActivity()
