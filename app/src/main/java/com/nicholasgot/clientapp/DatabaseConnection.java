@@ -22,9 +22,9 @@ import okhttp3.Response;
  * Connect to the database through web server
  */
 public class DatabaseConnection {
-//    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
+    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
 //    public static final String LOCAL_HOST = "http://192.168.1.2:5000"; // home network
-    public static final String LOCAL_HOST = "http://10.148.13.118:5000"; // Er Studio network
+//    public static final String LOCAL_HOST = "http://10.148.13.118:5000"; // Er Studio network
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static final String LOG_TAG = DatabaseConnection.class.getSimpleName();
 
@@ -34,27 +34,29 @@ public class DatabaseConnection {
      * @param destination destination lat/lon pair
      */
     public void postLocation(String source, String destination) {
-        // Input validation/sanitization; make no assumption about how clients will use method
+        final String CLIENT = "clientapp";
+        final String REQUESTS = "requests";
 
         OkHttpClient client = new OkHttpClient();
         HttpUrl.Builder urlBuilder = HttpUrl.parse(LOCAL_HOST).newBuilder();
-        urlBuilder.addPathSegment("clientapp")
-                .addPathSegment("requests");
+        urlBuilder.addPathSegment(CLIENT)
+                .addPathSegment(REQUESTS);
         String okUrl = urlBuilder.build().toString();
 
         RequestBody formBody;
+        final String SOURCE = "source";
+        final String DESTINATION = "destination";
+
         try {
             JSONObject json = new JSONObject();
-            json.put("source", source);
-            //json.put("request_id", req_id);
-            json.put("destination", destination);
+            json.put(SOURCE, source);
+            json.put(DESTINATION, destination);
             formBody = RequestBody.create(JSON, json.toString());
 
         } catch (JSONException je) {
             formBody = new FormBody.Builder()
-                    .add("source", source)
-                    .add("destination", destination)
-                    //.add("request_id", req_id)
+                    .add(SOURCE, source)
+                    .add(DESTINATION, destination)
                     .build();
 
             Log.v(LOG_TAG, "Json Error: " + je);
@@ -76,7 +78,7 @@ public class DatabaseConnection {
                 if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
                 else {
                     String rowsInserted = response.body().string();
-                    Log.v(LOG_TAG, "DB response: " + rowsInserted);
+                    Log.v(LOG_TAG, "Rows inserted: " + rowsInserted);
                 }
             }
         });

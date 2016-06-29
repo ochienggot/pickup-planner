@@ -53,15 +53,21 @@ public class GeocodeLocationTask implements Callback {
      * Background task to geocode address stored in SharedPreferences
      */
     public void doInBackground() {
-        String API_KEY = "key";
+        final String API_KEY = "key";
+        final String MAP = "maps";
+        final String API = "api";
+        final String GEOCODE = "geocode";
+        final String JSON = "json";
+        final String ADDRESS = "address";
+        final String GOOGLE_MAPS_URL = "https://maps.googleapis.com";
 
         OkHttpClient httpClient = new OkHttpClient();
-        HttpUrl.Builder urlBuilder = HttpUrl.parse("https://maps.googleapis.com").newBuilder();
-        urlBuilder.addPathSegment("maps")
-                .addPathSegment("api")
-                .addPathSegment("geocode")
-                .addPathSegment("json")
-                .addQueryParameter("address", location)
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(GOOGLE_MAPS_URL).newBuilder();
+        urlBuilder.addPathSegment(MAP)
+                .addPathSegment(API)
+                .addPathSegment(GEOCODE)
+                .addPathSegment(JSON)
+                .addQueryParameter(ADDRESS, location)
                 .addQueryParameter(API_KEY, "AIzaSyBAIZEm2AXkw4Wv5P4y5QzMxv9rFlX7i0Y");
 
         String okUrl = urlBuilder.build().toString();
@@ -70,27 +76,6 @@ public class GeocodeLocationTask implements Callback {
                 .build();
 
         httpClient.newCall(request).enqueue(this);
-    }
-
-    /**
-     * Uses JSON response data to obtain the location latitude/longitude
-     * @param responseData response data from Google Geocoding API
-     */
-    protected void getLocationFromJson(String responseData) {
-        try {
-            JSONObject jsonObject = new JSONObject(responseData);
-            JSONArray jsonArray = jsonObject.getJSONArray("results");
-            JSONObject obj = jsonArray.getJSONObject(0);
-            JSONObject jsonGeometry = obj.getJSONObject("geometry");
-            JSONObject jsonLocation = jsonGeometry.getJSONObject("location");
-
-            String lat = jsonLocation.getString("lat");
-            String lon = jsonLocation.getString("lng");
-            mCodedLocation = new LatLng(Double.parseDouble(lat), Double.parseDouble(lon));
-
-        } catch (JSONException je) {
-            Log.v(LOG_TAG, "Json Exception " + je);
-        }
     }
 
     @Override

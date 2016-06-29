@@ -1,28 +1,31 @@
 package com.nicholasgot.clientapp;
 
-import android.app.Activity;
 import android.app.DialogFragment;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.nicholasgot.clientapp.gcm.MyPreferences;
+import com.nicholasgot.clientapp.gcm.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
     private final static String LOG_TAG = MainActivity.class.getSimpleName();
     private boolean mRadioTravel;
     private boolean mRadioEvent;
+
+    private BroadcastReceiver mRegistrationBroadcastReceiver;
+    private boolean isReceiverRegistered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,25 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
+        mRegistrationBroadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+                boolean sentToken = sharedPreferences.getBoolean(MyPreferences.SENT_TOKEN_TO_SERVER, false);
+                if (sentToken) {
+                    // Display toast with message
+                }
+                else {
+                    // Error message
+                }
+            }
+        };
+        registerReceiver();
+
+        // Assumes google play services exist, make check here
+        Intent intent = new Intent(this, RegistrationIntentService.class);
+        startService(intent);
 
         /*
         Spinner spinner = (Spinner) findViewById(R.id.events_spinner);
@@ -58,6 +80,27 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //            }
 //        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver();
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+        isReceiverRegistered = false;
+        super.onPause();
+    }
+
+    private void registerReceiver() {
+        if (!isReceiverRegistered) {
+            LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                    new IntentFilter(MyPreferences.REGISTRATION_COMPLETE));
+            isReceiverRegistered = false;
+        }
     }
 
     @Override
@@ -111,5 +154,4 @@ public class MainActivity extends AppCompatActivity {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getFragmentManager(), "datePicker");
     }
-
 }

@@ -59,11 +59,6 @@ public class TravelActivity extends AppCompatActivity {
 
     private static Map<String, LatLng> locations = new HashMap<>();
 
-    private Button mDestinationAirport;
-    private Button mDestinationShopping;
-    private Button mDestinationLibrary;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,33 +66,32 @@ public class TravelActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mEditText = (EditText) findViewById(R.id.user_location_edit_text);
-        mEditText.setOnEditorActionListener(new EditText.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    Toast.makeText(getApplicationContext(), "Entered pickup location", Toast.LENGTH_SHORT).show();
-
-                    String locationPref = mEditText.getText().toString(); // Heed compiler warnings always!
-                    if (locationPref.equals(MY_LOCATION)) sourceLocation = DEFAULT_LOCATION;
-                    else sourceLocation = locationPref;
-                    geoCodeLocation(sourceLocation);
-
-                    return true;
-                }
-                return false;
-            }
-        });
+        // TODO: program in terms of the problem domain, not the low-level implementation detail
+//        mEditText = (EditText) findViewById(R.id.user_location_edit_text);
+//        mEditText.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_DONE) {
+//                    Toast.makeText(getApplicationContext(), "Pickup location entered.", Toast.LENGTH_SHORT).show();
+//
+//                    String locationPref = mEditText.getText().toString(); // Heed compiler warnings always!
+//                    if (locationPref.equals(MY_LOCATION)) sourceLocation = DEFAULT_LOCATION;
+//                    else sourceLocation = locationPref;
+//                    geoCodeLocation(sourceLocation);
+//
+//                    return true;
+//                }
+//                else {
+//                    geoCodeLocation(DEFAULT_LOCATION);
+//                    return true;
+//                }
+//            }
+//        });
 
         mSpinner = (Spinner) findViewById(R.id.events_spinner);
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String item = (String) parent.getItemAtPosition(position);
-                if (item.equals("Shopping")) {
-                    Toast.makeText(getApplicationContext(), "Spinner item selected", Toast.LENGTH_SHORT).show();
-                }
-
                 destLocation = (String) mSpinner.getSelectedItem();
                 geoCode = new GeocodeLocationTask(destLocation);
                 geoCode.doInBackground();
@@ -163,6 +157,10 @@ public class TravelActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Update the spinner view items depending the user selection
+     * @param view chosen button
+     */
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -195,8 +193,8 @@ public class TravelActivity extends AppCompatActivity {
     protected void updateSpinnerAdapter(Spinner spinner, int id) {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 id,
-                android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
@@ -224,21 +222,27 @@ public class TravelActivity extends AppCompatActivity {
      * @param responseData response data from Google Geocoding API
      */
     public static void getLocationFromJson(String loc, String responseData) {
+        final String RESULTS = "results";
+        final String GEOMETRY = "geometry";
+        final String LOCATION = "location";
+        final String LATITUDE = "lat";
+        final String LONGITUDE = "lng";
+
         try {
             JSONObject jsonObject = new JSONObject(responseData);
-            JSONArray jsonArray = jsonObject.getJSONArray("results");
+            JSONArray jsonArray = jsonObject.getJSONArray(RESULTS);
             JSONObject obj = jsonArray.getJSONObject(0);
-            JSONObject jsonGeometry = obj.getJSONObject("geometry");
-            JSONObject jsonLocation = jsonGeometry.getJSONObject("location");
+            JSONObject jsonGeometry = obj.getJSONObject(GEOMETRY);
+            JSONObject jsonLocation = jsonGeometry.getJSONObject(LOCATION);
 
-            String lat = jsonLocation.getString("lat");
-            String lon = jsonLocation.getString("lng");
+            String lat = jsonLocation.getString(LATITUDE);
+            String lon = jsonLocation.getString(LONGITUDE);
 
             LatLng loc1 = new LatLng(Double.parseDouble(lat), Double.parseDouble(lon));
             locations.put(loc, loc1);
 
         } catch (JSONException je) {
-            Log.v(LOG_TAG, "Json Exception " + je);
+            Log.v(LOG_TAG, "Json Exception: " + je);
         }
     }
 
@@ -255,7 +259,7 @@ public class TravelActivity extends AppCompatActivity {
             postRequestToDatabase();
         }
         else {
-            Log.e(LOG_TAG, "Null location from geocode.");
+            Log.e(LOG_TAG, "Null location from Geocoding API.");
         }
     }
 
@@ -268,7 +272,7 @@ public class TravelActivity extends AppCompatActivity {
         LatLng dst = locations.get(destLocation);
 
         if (src == null || dst == null) {
-            Toast.makeText(this, "Source and destination must not be null", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Errors occurred while Geocoding pickup or destination locations.", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -276,6 +280,6 @@ public class TravelActivity extends AppCompatActivity {
         String destination = "(" + dst.latitude + "," + dst.longitude + ")";
         db.postLocation(source, destination);
 
-        Toast.makeText(this, "Request sent. You will receive a notification on your travel details.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Request successfully sent. You will receive a notification on your travel details.", Toast.LENGTH_LONG).show();
     }
 }

@@ -10,28 +10,42 @@
     tools:context="com.nicholasgot.clientapp.TravelActivityFragment"
     tools:showIn="@layout/activity_travel">
 
-    <TextView
-        android:id="@+id/location_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pickup_location"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        />
+    <!--<TextView-->
+        <!--android:id="@+id/location_text_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/pickup_location"-->
+        <!--android:textSize="20sp"-->
+        <!--/>-->
+
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="75dp">
 
-        <EditText
-            android:id="@+id/user_location_edit_text"
+        <com.nicholasgot.clientapp.autocomplete.CustomAutocompleteTextView
+            android:id="@+id/pickupLocationTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/use_current_location"
-            android:inputType="text"
-            android:imeOptions="actionDone"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            />
+            android:layout_alignLeft="@+id/travelPlannerStartingPointTextField"
+            android:layout_alignRight="@+id/travelPlannerStartingPointTextField"
+            android:layout_below="@+id/travelPlannerStartingPointTextField"
+            android:ems="10"
+            android:textSize="20sp"
+            android:hint="@string/pickup_location"
+            android:inputType="textPostalAddress" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/user_location_edit_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/use_current_location"-->
+            <!--android:inputType="text"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:textSize="20sp"-->
+            <!--/>-->
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +95,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textSize="20sp"
+            android:padding="5dip"
             android:text="@string/select_destination"/>
 
         <RadioGroup
@@ -95,6 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/dst_airport"
+                android:textSize="20sp"
                 android:onClick="onRadioButtonClicked"
                 />
             <RadioButton
@@ -102,6 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/dst_library"
+                android:textSize="20sp"
                 android:onClick="onRadioButtonClicked"
                 />
             <RadioButton
@@ -109,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/dst_shopping_mall"
+                android:textSize="20sp"
                 android:onClick="onRadioButtonClicked"
                 />
         </RadioGroup>
@@ -127,31 +145,32 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
-    <TextView
-        android:id="@+id/text_view_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        />
+        <Spinner
+            android:id="@+id/dates_spinner"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
 
-    <Spinner
-        android:id="@+id/dates_spinner"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        />
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="5dip"
+            />
 
-    <TextView
-        android:id="@+id/text_view_time"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="@string/pick_time"
-        android:layout_marginStart="50dp"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        android:onClick="showTimePickerDialog"
-        />
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_time"
+            android:textSize="20sp"
+            android:padding="5dip"
+            android:onClick="showTimePickerDialog"
+            />
     </LinearLayout>
 
     <Button
