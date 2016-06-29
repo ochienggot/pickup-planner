@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="pref_location"
+        android:title="@string/location"
+        android:summary="@string/location_summary"
+        android:dialogTitle="@string/location_summary"
+        android:defaultValue="@string/location_default" />
+
+    <!--<ListPreference-->
+        <!--android:key="pref_activity_chooser"-->
+        <!--android:title="@string/pref_event_title"-->
+        <!--android:entries="@array/pref_event_day_entries"-->
+        <!--android:entryValues="@array/pref_event_day_values"-->
+        <!--android:defaultValue="@string/travel" />-->
+
+    <CheckBoxPreference
+        android:key="pref_special_needs"
+        android:title="Do you have any disability?"
+        android:defaultValue="false"
+        android:summary="Check if you require special travel" />
+
+</PreferenceScreen>

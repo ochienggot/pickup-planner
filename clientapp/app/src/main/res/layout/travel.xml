@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/where_to_travel_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/where_to_travel"
+        android:layout_weight="0.15"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_marginLeft="10dp" />
+
+</LinearLayout>
