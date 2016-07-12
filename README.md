@@ -11,5 +11,7 @@ Trip Generator and Traffic Handler: run on a backend server
 
 # Dependencies
 DBMS e.g. PostgreSQL and psycopg2
+
 ML library e.g. Scikit-Learn
+
 ASP solver (Clingo4)
