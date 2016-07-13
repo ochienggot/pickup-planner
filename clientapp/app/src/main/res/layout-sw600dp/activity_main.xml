@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nicholasgot.clientapp.MainActivity"
+    android:weightSum="1">
+
+    <!-- Add action bar to main activity -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/welcome_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/welcome"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textAlignment="center"
+        android:textIsSelectable="true"
+        />
+
+    <TextView
+        android:id="@+id/where_to_travel_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/where_to_travel"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical" >
+        <RadioButton
+            android:id="@+id/radio_travel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/travel"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:onClick="onRadioButtonClicked"
+            />
+        <RadioButton
+            android:id="@+id/radio_attend_event"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/attend_event"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:onClick="onRadioButtonClicked"
+            />
+    </RadioGroup>
+
+    <!--Spinner
+        android:id="@+id/events_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" /-->
+
+</LinearLayout>

@@ -20,6 +20,11 @@ android {
             debuggable true
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'GOOGLE_GEOCODING_API_KEY', "\"AIzaSyBAIZEm2AXkw4Wv5P4y5QzMxv9rFlX7i0Y\""
+        it.buildConfigField 'String', 'GOOGLE_AUTOCOMPLETE_API_KEY', "\"AIzaSyASWvCvTVfkJu6fWnimv7x3u3sQ40_Y82c\""
+        it.buildConfigField 'String', 'GOOGLE_MAPS_API_KEY', "\"AIzaSyASWvCvTVfkJu6fWnimv7x3u3sQ40_Y82c\""
+    }
 }
 
 dependencies {

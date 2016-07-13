@@ -1,5 +1,6 @@
 package com.nicholasgot.clientapp.utils;
 
+import com.nicholasgot.clientapp.BuildConfig;
 import com.nicholasgot.clientapp.TravelActivity;
 
 import java.io.IOException;
@@ -60,7 +61,7 @@ public class GeocodeLocationTask implements Callback {
                 .addPathSegment(GEOCODE)
                 .addPathSegment(JSON)
                 .addQueryParameter(ADDRESS, location)
-                .addQueryParameter(API_KEY, "AIzaSyBAIZEm2AXkw4Wv5P4y5QzMxv9rFlX7i0Y");
+                .addQueryParameter(API_KEY, BuildConfig.GOOGLE_GEOCODING_API_KEY);
 
         String okUrl = urlBuilder.build().toString();
         Request request = new Request.Builder()

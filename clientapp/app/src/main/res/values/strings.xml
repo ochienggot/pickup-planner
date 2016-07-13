@@ -52,4 +52,7 @@
     <string name="date_today">Date: today</string>
     <string name="date_earliest_date">Date: earliest</string>
 
+    <!-- Default pickup location in absence of user input -->
+    <string name="default_pickup_location">Default: current location</string>
+
 </resources>

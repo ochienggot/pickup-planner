@@ -379,32 +379,35 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
     }
 
     private String getAutoCompleteUrl(String place) {
-        String key = "key=AIzaSyASWvCvTVfkJu6fWnimv7x3u3sQ40_Y82c";
-        String input = "input=" + place;
-        String types = "types=geocode";
-        String sensor = "sensor=false";
+        String PATH = "https://maps.googleapis.com/maps/api/place/autocomplete/";
+        String INPUT = "input=" + place;
+        String TYPES = "types=geocode";
+        String SENSOR = "sensor=false";
+        String KEY = "key=";
+        String OUTPUT = "json";
 
         // Building the parameters to the web service
-        String parameters = input + "&" + types + "&" + sensor + "&" + key;
-        String output = "json";
-        String url = "https://maps.googleapis.com/maps/api/place/autocomplete/"
-                + output + "?" + parameters;
+        String PARAMETERS = INPUT + "&" +
+                TYPES + "&" +
+                SENSOR + "&" +
+                KEY + BuildConfig.GOOGLE_AUTOCOMPLETE_API_KEY;
 
-        return url;
+        return PATH + OUTPUT + "?" + PARAMETERS;
     }
 
     private String getPlaceDetailsUrl(String ref) {
-        String key = "key=AIzaSyASWvCvTVfkJu6fWnimv7x3u3sQ40_Y82c";
-        String reference = "reference=" + ref;
-        String sensor = "sensor=false";
+        String PATH = "https://maps.googleapis.com/maps/api/place/details/";
+        String REFERENCE = "reference=" + ref;
+        String SENSOR = "sensor=false";
+        String KEY = "key=";
+        String OUTPUT = "json";
 
         // Building the parameters to the web service
-        String parameters = reference + "&" + sensor + "&" + key;
-        String output = "json";
-        String url = "https://maps.googleapis.com/maps/api/place/details/"
-                + output + "?" + parameters;
+        String PARAMETERS = REFERENCE + "&" +
+                SENSOR + "&" +
+                KEY + BuildConfig.GOOGLE_MAPS_API_KEY;
 
-        return url;
+        return PATH + OUTPUT + "?" + PARAMETERS;
     }
 
     /** A class, to download Places from Geocoding webservice */

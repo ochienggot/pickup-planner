@@ -10,19 +10,21 @@
     tools:context="com.nicholasgot.clientapp.TravelActivityFragment"
     tools:showIn="@layout/activity_travel">
 
-    <!--<TextView-->
-        <!--android:id="@+id/location_text_view"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/pickup_location"-->
-        <!--android:textSize="20sp"-->
-        <!--/>-->
+    <!-- Using density independent measurements dp and sp -->
 
+    <TextView
+        android:id="@+id/location_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pickup_location"
+        android:textSize="20sp"
+        />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="75dp">
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp">
 
         <com.nicholasgot.clientapp.autocomplete.CustomAutocompleteTextView
             android:id="@+id/pickupLocationTextField"
@@ -33,7 +35,7 @@
             android:layout_below="@+id/travelPlannerStartingPointTextField"
             android:ems="10"
             android:textSize="20sp"
-            android:hint="@string/pickup_location"
+            android:hint="@string/default_pickup_location"
             android:inputType="textPostalAddress" />
 
         <!--<EditText-->
