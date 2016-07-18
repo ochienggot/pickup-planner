@@ -6,11 +6,11 @@ The implementation of the Pickup planner service partially builds on components 
 
 # Dependencies
 
-Database e.g. PostgreSQL/psycopg2
-Clustering library e.g. Scikit-Learn
-Networkx
+Database e.g. PostgreSQL/psycopg2  
+Clustering library e.g. Scikit-Learn  
+Networkx  
 ASP solver (Clingo4)
 
 # Installation
-Client and vehicle app: installed on Android devices.
+Client and vehicle app: installed on Android devices.  
 Trip Generator and Traffic Handler: run on a backend server by a cron job.
