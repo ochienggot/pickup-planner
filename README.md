@@ -1,15 +1,15 @@
 # Pickup-planner
-The goal of the Pickup planner system is to provide a pickup service that can be used by fleet managment companies as a travel service for city residents destinations, satisfying their varying travel needs. The client app allows users to register to the system and send travel requests. The system backed processes the travel requests and presents a travel trajectory to the vehicle app, which is used by the driver to service the requests. 
+The goal of the Pickup planner system is to provide a pickup service that can be used by fleet managment companies as a travel service for city residents, satisfying their varying travel needs. The front end consists of the Client app and Vehicle app. The Client app allows users to register for the service and issue travel requests. The system backend processes these requests and sends a travel trajectory to the Vehicle app, which visualizes and updates the trips the vehicle should take in order to satisfy the travel requests.
 
-The implementation of the Pickup planner service partially builds on components from the Citypulse framework. It
-implements a scheduling and dynamic route optimization algorithm together with a working prototype. Currently, the
-system only uses OpenStreetMap data for Stockholm, but can easily incorporate data for other cities.
+The implementation of the Pickup planner service partially builds on components from the Citypulse framework, i.e. Decision Support and Geospatial Data Infrastructure (GDI). It includes a scheduling and dynamic route optimization algorithm. The system currently uses OpenStreetMap data for Stockholm, but can easily incorporate data for other cities through the GDI.
+
+
+# Dependencies
+Database e.g. PostgreSQL/psycopg2
+Clustering library e.g. Scikit-Learn
+Networkx
+ASP solver (Clingo4)
 
 # Installation
 Client and vehicle app: installed on Android devices.
-Trip Generator and Traffic Handler: run on a backend server
-
-# Dependencies
-DBMS e.g. PostgreSQL and psycopg2
-ML library e.g. Scikit-Learn
-ASP solver (Clingo4)
+Trip Generator and Traffic Handler: run on a backend server by a cron job.
