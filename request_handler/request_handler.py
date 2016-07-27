@@ -22,7 +22,7 @@ def get_requests():
     '''
     conn = pg.connect(database="ngot", host="127.0.0.1", port="5432")
     cursor = conn.cursor()
-    cursor.execute("SELECT request_id, source, destination from requests")
+    cursor.execute("SELECT request_id, source, destination FROM requests")
     rows = list(cursor.fetchall())
     cursor.close()
     conn.close()
@@ -38,7 +38,7 @@ def get_vehicle_trips():
     pg.extensions.register_type(
         pg.extensions.new_array_type(
         (1017,), 'PICKUP_POINTS[]', pg.STRING))
-    cursor.execute("SELECT pickup_points from vehicletrips")
+    cursor.execute("SELECT pickup_points FROM vehicletrips")
     rows = cursor.fetchone()
     cursor.close()
     conn.close()
@@ -55,7 +55,7 @@ def create_request():
     #request_id = request.json['request_id']
     source = request.json['source']
     destination = request.json['destination']
-    cursor.execute("INSERT INTO requests (source, destination) values (%s, %s)", (source, destination))
+    cursor.execute("INSERT INTO requests (source, destination) VALUES (%s, %s)", (source, destination))
     rows = cursor.rowcount
     conn.commit()
     cursor.close()
