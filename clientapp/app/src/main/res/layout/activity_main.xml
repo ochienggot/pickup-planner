@@ -25,45 +25,42 @@
         android:layout_height="50dp"
         android:text="@string/welcome"
         android:gravity="center"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="36sp"
         android:textAlignment="center"
-        android:textIsSelectable="true"
-        />
+        android:textIsSelectable="true" />
 
     <TextView
         android:id="@+id/where_to_travel_text_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="@string/where_to_travel"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        />
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="24sp"
+        android:text="@string/where_to_travel" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical" >
+
         <RadioButton
             android:id="@+id/radio_travel"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/travel"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:onClick="onRadioButtonClicked"
-            />
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onRadioButtonClicked" />
+
         <RadioButton
             android:id="@+id/radio_attend_event"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/attend_event"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:onClick="onRadioButtonClicked"
-            />
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onRadioButtonClicked" />
     </RadioGroup>
-
-    <!--Spinner
-        android:id="@+id/events_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.10" /-->
-
 </LinearLayout>

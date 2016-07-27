@@ -17,8 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pickup_location"
-        android:textSize="20sp"
-        />
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-condensed" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -28,109 +29,78 @@
 
         <com.nicholasgot.clientapp.autocomplete.CustomAutocompleteTextView
             android:id="@+id/pickupLocationTextField"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="3"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/travelPlannerStartingPointTextField"
-            android:layout_alignRight="@+id/travelPlannerStartingPointTextField"
-            android:layout_below="@+id/travelPlannerStartingPointTextField"
             android:ems="10"
-            android:textSize="20sp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-light"
             android:hint="@string/default_pickup_location"
             android:inputType="textPostalAddress" />
 
-        <!--<EditText-->
-            <!--android:id="@+id/user_location_edit_text"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="@string/use_current_location"-->
-            <!--android:inputType="text"-->
-            <!--android:imeOptions="actionDone"-->
-            <!--android:textSize="20sp"-->
-            <!--/>-->
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_location_red_400_24dp"/>
-
-        <!--fragment
-            android:id="@+id/place_autocomplete_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/-->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_add_location_red_400_36dp"/>
+        </FrameLayout>
 
     </LinearLayout>
 
-    <!--TextView
-        android:id="@+id/text_view_choose_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        android:text="@string/choose_travel_date"/-->
-
-    <!--LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/text_view_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/default_travel_date"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:onClick="showDatePickerDialog"
-            />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_date_range_pink_200_24dp"/>
-
-    </LinearLayout-->
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="34sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/select_destination"/>
 
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:padding="5dip"
-            android:text="@string/select_destination"/>
 
         <RadioGroup
             android:id="@+id/radio_select_destination"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:orientation="vertical">
+
             <RadioButton
                 android:id="@+id/radio_airport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/dst_airport"
-                android:textSize="20sp"
-                android:onClick="onRadioButtonClicked"
-                />
+                android:textAppearance="?android:textAppearanceLarge"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onRadioButtonClicked" />
+
             <RadioButton
                 android:id="@+id/radio_library"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/dst_library"
-                android:textSize="20sp"
-                android:onClick="onRadioButtonClicked"
-                />
+                android:textAppearance="?android:textAppearanceLarge"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onRadioButtonClicked" />
+
             <RadioButton
                 android:id="@+id/radio_shopping_mall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/dst_shopping_mall"
-                android:textSize="20sp"
-                android:onClick="onRadioButtonClicked"
-                />
+                android:textAppearance="?android:textAppearanceLarge"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onRadioButtonClicked" />
         </RadioGroup>
 
         <Spinner
@@ -138,42 +108,45 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            />
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-light" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp">
 
         <Spinner
             android:id="@+id/dates_spinner"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            />
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/text_view_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:padding="5dip"
-            />
-
-        <TextView
-            android:id="@+id/text_view_time"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/pick_time"
-            android:textSize="20sp"
-            android:padding="5dip"
-            android:onClick="showTimePickerDialog"
-            />
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginLeft="8dp"
+            android:text="@string/no_date_selected"/>
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_time"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="showTimePickerDialog" />
 
     <Button
         android:id="@+id/submit_travel_request"
@@ -182,5 +155,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendRequestToDatabase"/>
-
 </LinearLayout>

@@ -74,6 +74,8 @@ public class TravelActivity extends AppCompatActivity {
 //        });
 
         mSpinner = (Spinner) findViewById(R.id.events_spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item);
+        mSpinner.setAdapter(adapter);
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -249,20 +251,18 @@ public class TravelActivity extends AppCompatActivity {
      * Send to the database
      */
     protected void postRequestToDatabase() {
-        DatabaseConnection db = new DatabaseConnection();
+        DatabaseConnection db = new DatabaseConnection(this);
 //        LatLng src = locations.get(sourceLocation);
         LatLng dst = locations.get(destLocation);
         LatLng src = TravelActivityFragment.destinationPoint;
 
         if (src == null || dst == null) {
-            Toast.makeText(this, "Errors occurred while Geocoding pickup or destination locations.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error in Geocoding Pickup/destination location.", Toast.LENGTH_LONG).show();
             return;
         }
 
         String source = "(" + src.latitude + "," + src.longitude + ")";
         String destination = "(" + dst.latitude + "," + dst.longitude + ")";
         db.postLocation(source, destination);
-
-        Toast.makeText(this, "Request successfully sent. You will receive a notification on your travel details.", Toast.LENGTH_LONG).show();
     }
 }

@@ -16,6 +16,9 @@ public class EventsActivityFragment extends Fragment {
     public EventsActivityFragment() {
     }
 
+    // TODO: Make this activity do something a lot more useful (List of events happening nearby
+    // TODO: consider modularising desing by having a fragment to enable display of pref settings for travel
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

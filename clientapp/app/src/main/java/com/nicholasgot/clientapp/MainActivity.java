@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NavUtils;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,8 +23,6 @@ import com.nicholasgot.clientapp.gcm.RegistrationIntentService;
 public class MainActivity extends AppCompatActivity {
 
     private final static String LOG_TAG = MainActivity.class.getSimpleName();
-//    private boolean mRadioTravel;
-//    private boolean mRadioEvent;
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private boolean isReceiverRegistered;
@@ -35,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Set up support action toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.project_icon);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
@@ -57,30 +58,6 @@ public class MainActivity extends AppCompatActivity {
         // Assumes google play services exist, make check here
         Intent intent = new Intent(this, RegistrationIntentService.class);
         startService(intent);
-
-        /*
-        Spinner spinner = (Spinner) findViewById(R.id.events_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.events_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        */
-
-        // Set click listener for Button
-//        Button button = (Button) findViewById(R.id.button_confirm_events);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (mRadioTravel) {
-//                    Intent travelIntent = new Intent(getApplicationContext(), TravelActivity.class);
-//                    startActivity(travelIntent);
-//                }
-//                if (mRadioEvent) {
-//                    Intent eventIntent = new Intent(getApplicationContext(), EventsActivity.class);
-//                    startActivity(eventIntent);
-//                }
-//            }
-//        });
     }
 
     @Override
@@ -124,29 +101,22 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
-        // Determine which button was clicked
         switch (view.getId()) {
             case R.id.radio_travel:
                 if (checked) {
                     Intent travelIntent = new Intent(getApplicationContext(), TravelActivity.class);
                     startActivity(travelIntent);
-//                    mRadioTravel = true;
-//                    mRadioEvent = false;
                 }
                 break;
             case R.id.radio_attend_event:
                 if (checked) {
                     Intent eventIntent = new Intent(getApplicationContext(), EventsActivity.class);
                     startActivity(eventIntent);
-//                    mRadioEvent = true;
-//                    mRadioTravel = false; // TODO: handle this better
                 }
         }
     }

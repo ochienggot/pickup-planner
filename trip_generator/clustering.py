@@ -17,7 +17,7 @@ def cluster_requests(group_requests):
     '''
     conn = pg.connect(database="ngot", host = "127.0.0.1", port = "5432")
     cursor = conn.cursor()
-    cursor.execute("SELECT latitude, longitude, node_id from nodes where node_id != 1 and node_id != 100") # TODO: Handle origin and end nodes better
+    cursor.execute("SELECT latitude, longitude, node_id FROM nodes WHERE node_id != 1 AND node_id != 100") # TODO: Handle origin and end nodes better
     rows = cursor.fetchall()
     coords_id = {}
     for row in rows:
@@ -92,8 +92,8 @@ def cluster_requests_7():
     vehicle_capacity = 4.0
     if num_passengers > vehicle_capacity:
         num_clusters = math.ceil(num_passengers/vehicle_capacity)
-        print "With clustering, num travelers = " + str(num_passengers)
-        print "Num clusters = " + str(num_clusters) 
+        #print "With clustering, num travelers = " + str(num_passengers)
+        #print "Num clusters = " + str(num_clusters) 
     else:
         num_clusters = 1
 
@@ -118,7 +118,7 @@ def cluster_requests_7():
                 result_i[coords_id[(loc_i[0], loc_i[1])]] = (loc_i[0], loc_i[1])
 
             clusters_all[i] = result_i
-        print "All clusters..............." 
+        #print "All clusters..............." 
         pprint.pprint(clusters_all)
 
         f = open('7_cluster_results.txt', 'w')
@@ -170,4 +170,3 @@ def random_group(coords_id, num_passengers, num_clusters):
 
 if __name__ == '__main__':
     cluster_requests(False)
-    #cluster_requests_7()

@@ -10,6 +10,10 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         // Set the settings fragment as the main display
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment())
