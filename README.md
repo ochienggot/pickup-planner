@@ -9,7 +9,7 @@ The implementation of the Pickup planner service partially builds on components 
 Database e.g. PostgreSQL/psycopg2  
 Clustering library e.g. Scipy or Scikit-Learn  
 Networkx  
-ASP solver (Clingo4) 
+ASP solver (Clingo4)   
 virtualenv  
 Flask  
 
