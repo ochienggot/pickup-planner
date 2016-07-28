@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity implements
 	private TabPagerAdapter mAdapter;
 	private ActionBar actionBar;
 //	private String[] tabs = {"Route"};
-	private String[] tabs = { "Route Planner", "Settings" };
+	private String[] tabs = { "Pickup Planner", "Settings" };
 	private final int ROUTE_TAB_NUMBER = 0;
 	private final int TRAVEL_TAB_NUMBER = 1;
 
@@ -106,10 +106,8 @@ public class MainActivity extends FragmentActivity implements
 		intentFilterReceiverRestart
 				.addAction(DefaultValues.COMMAND_GO_TO_TRAVEL_RECOMANDATION);
 		registerReceiver(broadcastReceiverRestart, intentFilterReceiverRestart);
-
 	}
 
-    // ADDED: settings menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -168,5 +166,4 @@ public class MainActivity extends FragmentActivity implements
 
 		return serverIP;
 	}
-
 }

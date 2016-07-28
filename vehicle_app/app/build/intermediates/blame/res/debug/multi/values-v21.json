@@ -7,74 +7,19 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 90,
-                    "endOffset": 141
+                    "endLine": 5,
+                    "endColumn": 12,
+                    "endOffset": 293
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/ngot/Desktop/Project/app/src/main/res/values-v21/styles.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 90,
-                        "endOffset": 141
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 146,
-                    "endColumn": 102,
-                    "endOffset": 244
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 146,
-                        "endColumn": 102,
-                        "endOffset": 244
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 249,
-                    "endColumn": 102,
-                    "endOffset": 347
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 249,
-                        "endColumn": 102,
-                        "endOffset": 347
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 352,
-                    "endColumn": 104,
-                    "endOffset": 452
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 352,
-                        "endColumn": 104,
-                        "endOffset": 452
+                        "startOffset": 739,
+                        "endLine": 18,
+                        "endColumn": 12,
+                        "endOffset": 977
                     }
                 }
             },
@@ -82,1598 +27,1073 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 457,
-                    "endColumn": 106,
-                    "endOffset": 559
+                    "startOffset": 298,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 570
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 457,
-                        "endColumn": 106,
-                        "endOffset": 559
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 564,
-                    "endColumn": 108,
-                    "endOffset": 668
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 564,
-                        "endColumn": 108,
-                        "endOffset": 668
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 673,
-                    "endColumn": 108,
-                    "endOffset": 777
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 673,
-                        "endColumn": 108,
-                        "endOffset": 777
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 782,
-                    "endColumn": 108,
-                    "endOffset": 886
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 782,
-                        "endColumn": 108,
-                        "endOffset": 886
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 891,
-                    "endColumn": 108,
-                    "endOffset": 995
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 891,
-                        "endColumn": 108,
-                        "endOffset": 995
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/src/main/res/values-v21/styles.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1000,
-                    "endColumn": 108,
-                    "endOffset": 1104
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1000,
-                        "endColumn": 108,
-                        "endOffset": 1104
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1109,
-                    "endColumn": 106,
-                    "endOffset": 1211
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1109,
-                        "endColumn": 106,
-                        "endOffset": 1211
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1216,
-                    "endColumn": 102,
-                    "endOffset": 1314
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1216,
-                        "endColumn": 102,
-                        "endOffset": 1314
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1319,
-                    "endColumn": 118,
-                    "endOffset": 1433
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1319,
-                        "endColumn": 118,
-                        "endOffset": 1433
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1438,
+                    "startOffset": 575,
                     "endLine": 16,
                     "endColumn": 12,
-                    "endOffset": 1588
+                    "endOffset": 931
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1438,
-                        "endLine": 16,
-                        "endColumn": 12,
-                        "endOffset": 1588
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/src/main/res/values-v21/styles.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1593,
-                    "endLine": 18,
-                    "endColumn": 12,
-                    "endOffset": 1743
+                    "startOffset": 936,
+                    "endColumn": 90,
+                    "endOffset": 1022
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1593,
-                        "endLine": 18,
-                        "endColumn": 12,
-                        "endOffset": 1743
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1027,
+                    "endColumn": 102,
+                    "endOffset": 1125
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1748,
-                    "endColumn": 104,
-                    "endOffset": 1848
+                    "startOffset": 1130,
+                    "endColumn": 102,
+                    "endOffset": 1228
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1748,
-                        "endColumn": 104,
-                        "endOffset": 1848
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1853,
-                    "endColumn": 120,
-                    "endOffset": 1969
+                    "startOffset": 1233,
+                    "endColumn": 104,
+                    "endOffset": 1333
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1853,
-                        "endColumn": 120,
-                        "endOffset": 1969
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1974,
-                    "endColumn": 100,
-                    "endOffset": 2070
+                    "startOffset": 1338,
+                    "endColumn": 106,
+                    "endOffset": 1440
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1974,
-                        "endColumn": 100,
-                        "endOffset": 2070
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2075,
-                    "endLine": 23,
-                    "endColumn": 12,
-                    "endOffset": 2217
+                    "startOffset": 1445,
+                    "endColumn": 108,
+                    "endOffset": 1549
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 2075,
-                        "endLine": 23,
-                        "endColumn": 12,
-                        "endOffset": 2217
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1554,
+                    "endColumn": 108,
+                    "endOffset": 1658
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2222,
-                    "endLine": 25,
-                    "endColumn": 12,
-                    "endOffset": 2358
+                    "startOffset": 1663,
+                    "endColumn": 108,
+                    "endOffset": 1767
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 2222,
-                        "endLine": 25,
-                        "endColumn": 12,
-                        "endOffset": 2358
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1772,
+                    "endColumn": 108,
+                    "endOffset": 1876
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2363,
-                    "endColumn": 102,
-                    "endOffset": 2461
+                    "startOffset": 1881,
+                    "endColumn": 108,
+                    "endOffset": 1985
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 2363,
-                        "endColumn": 102,
-                        "endOffset": 2461
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2466,
-                    "endColumn": 118,
-                    "endOffset": 2580
+                    "startOffset": 1990,
+                    "endColumn": 106,
+                    "endOffset": 2092
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 2466,
-                        "endColumn": 118,
-                        "endOffset": 2580
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2585,
-                    "endColumn": 106,
-                    "endOffset": 2687
+                    "startOffset": 2097,
+                    "endColumn": 102,
+                    "endOffset": 2195
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 2585,
-                        "endColumn": 106,
-                        "endOffset": 2687
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2692,
-                    "endColumn": 102,
-                    "endOffset": 2790
+                    "startOffset": 2200,
+                    "endColumn": 118,
+                    "endOffset": 2314
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 2692,
-                        "endColumn": 102,
-                        "endOffset": 2790
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 2795,
+                    "startOffset": 2319,
                     "endLine": 31,
                     "endColumn": 12,
-                    "endOffset": 2945
+                    "endOffset": 2469
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 4,
-                        "startOffset": 2795,
-                        "endLine": 31,
-                        "endColumn": 12,
-                        "endOffset": 2945
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2950,
+                    "startOffset": 2474,
                     "endLine": 33,
                     "endColumn": 12,
-                    "endOffset": 3116
+                    "endOffset": 2624
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 2950,
-                        "endLine": 33,
-                        "endColumn": 12,
-                        "endOffset": 3116
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 3121,
-                    "endLine": 35,
-                    "endColumn": 12,
-                    "endOffset": 3265
+                    "startOffset": 2629,
+                    "endColumn": 104,
+                    "endOffset": 2729
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 4,
-                        "startOffset": 3121,
-                        "endLine": 35,
-                        "endColumn": 12,
-                        "endOffset": 3265
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2734,
+                    "endColumn": 120,
+                    "endOffset": 2850
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3270,
-                    "endLine": 37,
-                    "endColumn": 12,
-                    "endOffset": 3430
+                    "startOffset": 2855,
+                    "endColumn": 100,
+                    "endOffset": 2951
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 4,
-                        "startOffset": 3270,
-                        "endLine": 37,
-                        "endColumn": 12,
-                        "endOffset": 3430
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3435,
-                    "endLine": 39,
+                    "startOffset": 2956,
+                    "endLine": 38,
                     "endColumn": 12,
-                    "endOffset": 3587
+                    "endOffset": 3098
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 4,
-                        "startOffset": 3435,
-                        "endLine": 39,
-                        "endColumn": 12,
-                        "endOffset": 3587
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3592,
-                    "endLine": 41,
+                    "startOffset": 3103,
+                    "endLine": 40,
                     "endColumn": 12,
-                    "endOffset": 3738
+                    "endOffset": 3239
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 3592,
-                        "endLine": 41,
-                        "endColumn": 12,
-                        "endOffset": 3738
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3244,
+                    "endColumn": 102,
+                    "endOffset": 3342
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3743,
+                    "startOffset": 3347,
                     "endColumn": 118,
-                    "endOffset": 3857
+                    "endOffset": 3461
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 42,
-                        "startColumn": 4,
-                        "startOffset": 3743,
-                        "endColumn": 118,
-                        "endOffset": 3857
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3862,
-                    "endLine": 44,
-                    "endColumn": 12,
-                    "endOffset": 4006
+                    "startOffset": 3466,
+                    "endColumn": 106,
+                    "endOffset": 3568
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 43,
-                        "startColumn": 4,
-                        "startOffset": 3862,
-                        "endLine": 44,
-                        "endColumn": 12,
-                        "endOffset": 4006
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3573,
+                    "endColumn": 102,
+                    "endOffset": 3671
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 4011,
+                    "startOffset": 3676,
                     "endLine": 46,
                     "endColumn": 12,
-                    "endOffset": 4155
+                    "endOffset": 3826
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 45,
-                        "startColumn": 4,
-                        "startOffset": 4011,
-                        "endLine": 46,
-                        "endColumn": 12,
-                        "endOffset": 4155
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4160,
-                    "endColumn": 111,
-                    "endOffset": 4267
+                    "startOffset": 3831,
+                    "endLine": 48,
+                    "endColumn": 12,
+                    "endOffset": 3997
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 47,
-                        "startColumn": 4,
-                        "startOffset": 4160,
-                        "endColumn": 111,
-                        "endOffset": 4267
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 48,
-                    "startColumn": 4,
-                    "startOffset": 4272,
-                    "endColumn": 146,
-                    "endOffset": 4414
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 48,
-                        "startColumn": 4,
-                        "startOffset": 4272,
-                        "endColumn": 146,
-                        "endOffset": 4414
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 4419,
+                    "startOffset": 4002,
                     "endLine": 50,
                     "endColumn": 12,
-                    "endOffset": 4567
+                    "endOffset": 4146
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 49,
-                        "startColumn": 4,
-                        "startOffset": 4419,
-                        "endLine": 50,
-                        "endColumn": 12,
-                        "endOffset": 4567
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 4572,
+                    "startOffset": 4151,
                     "endLine": 52,
                     "endColumn": 12,
-                    "endOffset": 4714
+                    "endOffset": 4311
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 51,
-                        "startColumn": 4,
-                        "startOffset": 4572,
-                        "endLine": 52,
-                        "endColumn": 12,
-                        "endOffset": 4714
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 4719,
-                    "endColumn": 74,
-                    "endOffset": 4789
+                    "startOffset": 4316,
+                    "endLine": 54,
+                    "endColumn": 12,
+                    "endOffset": 4468
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 53,
-                        "startColumn": 4,
-                        "startOffset": 4719,
-                        "endColumn": 74,
-                        "endOffset": 4789
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 54,
-                    "startColumn": 4,
-                    "startOffset": 4794,
-                    "endColumn": 88,
-                    "endOffset": 4878
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 54,
-                        "startColumn": 4,
-                        "startOffset": 4794,
-                        "endColumn": 88,
-                        "endOffset": 4878
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 4883,
-                    "endColumn": 86,
-                    "endOffset": 4965
+                    "startOffset": 4473,
+                    "endLine": 56,
+                    "endColumn": 12,
+                    "endOffset": 4619
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 55,
-                        "startColumn": 4,
-                        "startOffset": 4883,
-                        "endColumn": 86,
-                        "endOffset": 4965
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 56,
-                    "startColumn": 4,
-                    "startOffset": 4970,
-                    "endColumn": 100,
-                    "endOffset": 5066
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 56,
-                        "startColumn": 4,
-                        "startOffset": 4970,
-                        "endColumn": 100,
-                        "endOffset": 5066
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 5071,
-                    "endLine": 100,
-                    "endColumn": 12,
-                    "endOffset": 8134
+                    "startOffset": 4624,
+                    "endColumn": 118,
+                    "endOffset": 4738
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 57,
-                        "startColumn": 4,
-                        "startOffset": 5071,
-                        "endLine": 100,
-                        "endColumn": 12,
-                        "endOffset": 8134
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 101,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 8139,
-                    "endLine": 103,
+                    "startOffset": 4743,
+                    "endLine": 59,
                     "endColumn": 12,
-                    "endOffset": 8320
+                    "endOffset": 4887
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 101,
-                        "startColumn": 4,
-                        "startOffset": 8139,
-                        "endLine": 103,
-                        "endColumn": 12,
-                        "endOffset": 8320
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 104,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 8325,
-                    "endLine": 147,
+                    "startOffset": 4892,
+                    "endLine": 61,
                     "endColumn": 12,
-                    "endOffset": 11400
+                    "endOffset": 5036
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 104,
-                        "startColumn": 4,
-                        "startOffset": 8325,
-                        "endLine": 147,
-                        "endColumn": 12,
-                        "endOffset": 11400
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 148,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 11405,
-                    "endLine": 150,
-                    "endColumn": 12,
-                    "endOffset": 11598
+                    "startOffset": 5041,
+                    "endColumn": 111,
+                    "endOffset": 5148
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 148,
-                        "startColumn": 4,
-                        "startOffset": 11405,
-                        "endLine": 150,
-                        "endColumn": 12,
-                        "endOffset": 11598
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 151,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 11603,
-                    "endLine": 152,
-                    "endColumn": 12,
-                    "endOffset": 11721
+                    "startOffset": 5153,
+                    "endColumn": 146,
+                    "endOffset": 5295
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 151,
-                        "startColumn": 4,
-                        "startOffset": 11603,
-                        "endLine": 152,
-                        "endColumn": 12,
-                        "endOffset": 11721
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 153,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 11726,
-                    "endLine": 154,
+                    "startOffset": 5300,
+                    "endLine": 65,
                     "endColumn": 12,
-                    "endOffset": 11844
+                    "endOffset": 5448
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 153,
-                        "startColumn": 4,
-                        "startOffset": 11726,
-                        "endLine": 154,
-                        "endColumn": 12,
-                        "endOffset": 11844
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 155,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 11849,
-                    "endLine": 156,
+                    "startOffset": 5453,
+                    "endLine": 67,
                     "endColumn": 12,
-                    "endOffset": 11957
+                    "endOffset": 5595
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 155,
-                        "startColumn": 4,
-                        "startOffset": 11849,
-                        "endLine": 156,
-                        "endColumn": 12,
-                        "endOffset": 11957
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 157,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 11962,
-                    "endLine": 159,
-                    "endColumn": 12,
-                    "endOffset": 12140
+                    "startOffset": 5600,
+                    "endColumn": 74,
+                    "endOffset": 5670
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 157,
-                        "startColumn": 4,
-                        "startOffset": 11962,
-                        "endLine": 159,
-                        "endColumn": 12,
-                        "endOffset": 12140
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 160,
+                    "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 12145,
-                    "endLine": 161,
-                    "endColumn": 12,
-                    "endOffset": 12271
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 160,
-                        "startColumn": 4,
-                        "startOffset": 12145,
-                        "endLine": 161,
-                        "endColumn": 12,
-                        "endOffset": 12271
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 162,
-                    "startColumn": 4,
-                    "startOffset": 12276,
-                    "endLine": 164,
-                    "endColumn": 12,
-                    "endOffset": 12472
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 162,
-                        "startColumn": 4,
-                        "startOffset": 12276,
-                        "endLine": 164,
-                        "endColumn": 12,
-                        "endOffset": 12472
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 165,
-                    "startColumn": 4,
-                    "startOffset": 12477,
+                    "startOffset": 5675,
                     "endColumn": 88,
-                    "endOffset": 12561
+                    "endOffset": 5759
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 165,
-                        "startColumn": 4,
-                        "startOffset": 12477,
-                        "endColumn": 88,
-                        "endOffset": 12561
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5764,
+                    "endColumn": 86,
+                    "endOffset": 5846
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 5851,
+                    "endColumn": 100,
+                    "endOffset": 5947
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 5952,
+                    "endLine": 115,
+                    "endColumn": 12,
+                    "endOffset": 9015
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 9020,
+                    "endLine": 118,
+                    "endColumn": 12,
+                    "endOffset": 9201
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 9206,
+                    "endLine": 162,
+                    "endColumn": 12,
+                    "endOffset": 12281
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 163,
+                    "startColumn": 4,
+                    "startOffset": 12286,
+                    "endLine": 165,
+                    "endColumn": 12,
+                    "endOffset": 12479
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 166,
                     "startColumn": 4,
-                    "startOffset": 12566,
-                    "endColumn": 110,
-                    "endOffset": 12672
+                    "startOffset": 12484,
+                    "endLine": 167,
+                    "endColumn": 12,
+                    "endOffset": 12602
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 166,
-                        "startColumn": 4,
-                        "startOffset": 12566,
-                        "endColumn": 110,
-                        "endOffset": 12672
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 167,
-                    "startColumn": 4,
-                    "startOffset": 12677,
-                    "endColumn": 126,
-                    "endOffset": 12799
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 167,
-                        "startColumn": 4,
-                        "startOffset": 12677,
-                        "endColumn": 126,
-                        "endOffset": 12799
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 168,
                     "startColumn": 4,
-                    "startOffset": 12804,
-                    "endColumn": 100,
-                    "endOffset": 12900
+                    "startOffset": 12607,
+                    "endLine": 169,
+                    "endColumn": 12,
+                    "endOffset": 12725
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 168,
-                        "startColumn": 4,
-                        "startOffset": 12804,
-                        "endColumn": 100,
-                        "endOffset": 12900
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 169,
-                    "startColumn": 4,
-                    "startOffset": 12905,
-                    "endColumn": 94,
-                    "endOffset": 12995
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 169,
-                        "startColumn": 4,
-                        "startOffset": 12905,
-                        "endColumn": 94,
-                        "endOffset": 12995
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 170,
                     "startColumn": 4,
-                    "startOffset": 13000,
-                    "endColumn": 122,
-                    "endOffset": 13118
+                    "startOffset": 12730,
+                    "endLine": 171,
+                    "endColumn": 12,
+                    "endOffset": 12838
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 170,
-                        "startColumn": 4,
-                        "startOffset": 13000,
-                        "endColumn": 122,
-                        "endOffset": 13118
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 171,
-                    "startColumn": 4,
-                    "startOffset": 13123,
-                    "endColumn": 128,
-                    "endOffset": 13247
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 171,
-                        "startColumn": 4,
-                        "startOffset": 13123,
-                        "endColumn": 128,
-                        "endOffset": 13247
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 172,
                     "startColumn": 4,
-                    "startOffset": 13252,
-                    "endColumn": 116,
-                    "endOffset": 13364
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 172,
-                        "startColumn": 4,
-                        "startOffset": 13252,
-                        "endColumn": 116,
-                        "endOffset": 13364
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 173,
-                    "startColumn": 4,
-                    "startOffset": 13369,
-                    "endLine": 175,
+                    "startOffset": 12843,
+                    "endLine": 174,
                     "endColumn": 12,
-                    "endOffset": 13541
+                    "endOffset": 13021
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 173,
-                        "startColumn": 4,
-                        "startOffset": 13369,
-                        "endLine": 175,
-                        "endColumn": 12,
-                        "endOffset": 13541
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 176,
+                    "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 13546,
-                    "endColumn": 98,
-                    "endOffset": 13640
+                    "startOffset": 13026,
+                    "endLine": 176,
+                    "endColumn": 12,
+                    "endOffset": 13152
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 176,
-                        "startColumn": 4,
-                        "startOffset": 13546,
-                        "endColumn": 98,
-                        "endOffset": 13640
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 177,
                     "startColumn": 4,
-                    "startOffset": 13645,
-                    "endLine": 178,
+                    "startOffset": 13157,
+                    "endLine": 179,
                     "endColumn": 12,
-                    "endOffset": 13775
+                    "endOffset": 13353
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 177,
-                        "startColumn": 4,
-                        "startOffset": 13645,
-                        "endLine": 178,
-                        "endColumn": 12,
-                        "endOffset": 13775
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 179,
+                    "startLine": 180,
                     "startColumn": 4,
-                    "startOffset": 13780,
-                    "endLine": 180,
-                    "endColumn": 12,
-                    "endOffset": 13918
+                    "startOffset": 13358,
+                    "endColumn": 88,
+                    "endOffset": 13442
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 179,
-                        "startColumn": 4,
-                        "startOffset": 13780,
-                        "endLine": 180,
-                        "endColumn": 12,
-                        "endOffset": 13918
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 181,
                     "startColumn": 4,
-                    "startOffset": 13923,
-                    "endLine": 182,
-                    "endColumn": 12,
-                    "endOffset": 14053
+                    "startOffset": 13447,
+                    "endColumn": 110,
+                    "endOffset": 13553
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 181,
-                        "startColumn": 4,
-                        "startOffset": 13923,
-                        "endLine": 182,
-                        "endColumn": 12,
-                        "endOffset": 14053
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 13558,
+                    "endColumn": 126,
+                    "endOffset": 13680
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 183,
                     "startColumn": 4,
-                    "startOffset": 14058,
-                    "endLine": 184,
-                    "endColumn": 12,
-                    "endOffset": 14172
+                    "startOffset": 13685,
+                    "endColumn": 100,
+                    "endOffset": 13781
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 183,
-                        "startColumn": 4,
-                        "startOffset": 14058,
-                        "endLine": 184,
-                        "endColumn": 12,
-                        "endOffset": 14172
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 13786,
+                    "endColumn": 94,
+                    "endOffset": 13876
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 185,
                     "startColumn": 4,
-                    "startOffset": 14177,
-                    "endLine": 188,
-                    "endColumn": 12,
-                    "endOffset": 14373
+                    "startOffset": 13881,
+                    "endColumn": 122,
+                    "endOffset": 13999
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 185,
-                        "startColumn": 4,
-                        "startOffset": 14177,
-                        "endLine": 188,
-                        "endColumn": 12,
-                        "endOffset": 14373
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 189,
+                    "startLine": 186,
                     "startColumn": 4,
-                    "startOffset": 14378,
-                    "endLine": 190,
-                    "endColumn": 12,
-                    "endOffset": 14492
+                    "startOffset": 14004,
+                    "endColumn": 128,
+                    "endOffset": 14128
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 189,
-                        "startColumn": 4,
-                        "startOffset": 14378,
-                        "endLine": 190,
-                        "endColumn": 12,
-                        "endOffset": 14492
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 14133,
+                    "endColumn": 116,
+                    "endOffset": 14245
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 14250,
+                    "endLine": 190,
+                    "endColumn": 12,
+                    "endOffset": 14422
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 191,
                     "startColumn": 4,
-                    "startOffset": 14497,
-                    "endColumn": 92,
-                    "endOffset": 14585
+                    "startOffset": 14427,
+                    "endColumn": 98,
+                    "endOffset": 14521
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 191,
-                        "startColumn": 4,
-                        "startOffset": 14497,
-                        "endColumn": 92,
-                        "endOffset": 14585
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 192,
                     "startColumn": 4,
-                    "startOffset": 14590,
-                    "endColumn": 110,
-                    "endOffset": 14696
+                    "startOffset": 14526,
+                    "endLine": 193,
+                    "endColumn": 12,
+                    "endOffset": 14656
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 192,
-                        "startColumn": 4,
-                        "startOffset": 14590,
-                        "endColumn": 110,
-                        "endOffset": 14696
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 193,
-                    "startColumn": 4,
-                    "startOffset": 14701,
-                    "endColumn": 55,
-                    "endOffset": 14752
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 193,
-                        "startColumn": 4,
-                        "startOffset": 14701,
-                        "endColumn": 55,
-                        "endOffset": 14752
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 194,
                     "startColumn": 4,
-                    "startOffset": 14757,
+                    "startOffset": 14661,
                     "endLine": 195,
                     "endColumn": 12,
-                    "endOffset": 14859
+                    "endOffset": 14799
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 194,
-                        "startColumn": 4,
-                        "startOffset": 14757,
-                        "endLine": 195,
-                        "endColumn": 12,
-                        "endOffset": 14859
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 196,
                     "startColumn": 4,
-                    "startOffset": 14864,
-                    "endLine": 199,
+                    "startOffset": 14804,
+                    "endLine": 197,
                     "endColumn": 12,
-                    "endOffset": 15054
+                    "endOffset": 14934
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 196,
-                        "startColumn": 4,
-                        "startOffset": 14864,
-                        "endLine": 199,
-                        "endColumn": 12,
-                        "endOffset": 15054
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 198,
+                    "startColumn": 4,
+                    "startOffset": 14939,
+                    "endLine": 199,
+                    "endColumn": 12,
+                    "endOffset": 15053
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 200,
                     "startColumn": 4,
-                    "startOffset": 15059,
-                    "endLine": 201,
-                    "endColumn": 12,
-                    "endOffset": 15165
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 200,
-                        "startColumn": 4,
-                        "startOffset": 15059,
-                        "endLine": 201,
-                        "endColumn": 12,
-                        "endOffset": 15165
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 202,
-                    "startColumn": 4,
-                    "startOffset": 15170,
+                    "startOffset": 15058,
                     "endLine": 203,
                     "endColumn": 12,
-                    "endOffset": 15298
+                    "endOffset": 15254
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 202,
-                        "startColumn": 4,
-                        "startOffset": 15170,
-                        "endLine": 203,
-                        "endColumn": 12,
-                        "endOffset": 15298
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 204,
                     "startColumn": 4,
-                    "startOffset": 15303,
-                    "endColumn": 94,
-                    "endOffset": 15393
+                    "startOffset": 15259,
+                    "endLine": 205,
+                    "endColumn": 12,
+                    "endOffset": 15373
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 204,
-                        "startColumn": 4,
-                        "startOffset": 15303,
-                        "endColumn": 94,
-                        "endOffset": 15393
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 205,
-                    "startColumn": 4,
-                    "startOffset": 15398,
-                    "endColumn": 90,
-                    "endOffset": 15484
-                },
-                "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 205,
-                        "startColumn": 4,
-                        "startOffset": 15398,
-                        "endColumn": 90,
-                        "endOffset": 15484
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 206,
                     "startColumn": 4,
-                    "startOffset": 15489,
-                    "endColumn": 90,
-                    "endOffset": 15575
+                    "startOffset": 15378,
+                    "endColumn": 92,
+                    "endOffset": 15466
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 206,
-                        "startColumn": 4,
-                        "startOffset": 15489,
-                        "endColumn": 90,
-                        "endOffset": 15575
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 207,
                     "startColumn": 4,
-                    "startOffset": 15580,
-                    "endColumn": 116,
-                    "endOffset": 15692
+                    "startOffset": 15471,
+                    "endColumn": 110,
+                    "endOffset": 15577
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 207,
-                        "startColumn": 4,
-                        "startOffset": 15580,
-                        "endColumn": 116,
-                        "endOffset": 15692
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 208,
                     "startColumn": 4,
-                    "startOffset": 15697,
-                    "endLine": 209,
-                    "endColumn": 12,
-                    "endOffset": 15831
+                    "startOffset": 15582,
+                    "endColumn": 55,
+                    "endOffset": 15633
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 208,
-                        "startColumn": 4,
-                        "startOffset": 15697,
-                        "endLine": 209,
-                        "endColumn": 12,
-                        "endOffset": 15831
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 210,
+                    "startLine": 209,
                     "startColumn": 4,
-                    "startOffset": 15836,
-                    "endLine": 219,
+                    "startOffset": 15638,
+                    "endLine": 210,
                     "endColumn": 12,
-                    "endOffset": 16344
+                    "endOffset": 15740
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 210,
-                        "startColumn": 4,
-                        "startOffset": 15836,
-                        "endLine": 219,
-                        "endColumn": 12,
-                        "endOffset": 16344
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 211,
+                    "startColumn": 4,
+                    "startOffset": 15745,
+                    "endLine": 214,
+                    "endColumn": 12,
+                    "endOffset": 15935
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 15940,
+                    "endLine": 216,
+                    "endColumn": 12,
+                    "endOffset": 16046
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 217,
+                    "startColumn": 4,
+                    "startOffset": 16051,
+                    "endLine": 218,
+                    "endColumn": 12,
+                    "endOffset": 16179
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 219,
+                    "startColumn": 4,
+                    "startOffset": 16184,
+                    "endColumn": 94,
+                    "endOffset": 16274
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 220,
                     "startColumn": 4,
-                    "startOffset": 16349,
-                    "endLine": 229,
-                    "endColumn": 12,
-                    "endOffset": 16869
+                    "startOffset": 16279,
+                    "endColumn": 90,
+                    "endOffset": 16365
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 220,
-                        "startColumn": 4,
-                        "startOffset": 16349,
-                        "endLine": 229,
-                        "endColumn": 12,
-                        "endOffset": 16869
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 230,
+                    "startLine": 221,
                     "startColumn": 4,
-                    "startOffset": 16874,
-                    "endLine": 239,
-                    "endColumn": 12,
-                    "endOffset": 17549
+                    "startOffset": 16370,
+                    "endColumn": 90,
+                    "endOffset": 16456
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 230,
-                        "startColumn": 4,
-                        "startOffset": 16874,
-                        "endLine": 239,
-                        "endColumn": 12,
-                        "endOffset": 17549
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 240,
+                    "startLine": 222,
                     "startColumn": 4,
-                    "startOffset": 17554,
+                    "startOffset": 16461,
+                    "endColumn": 116,
+                    "endOffset": 16573
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 223,
+                    "startColumn": 4,
+                    "startOffset": 16578,
+                    "endLine": 224,
+                    "endColumn": 12,
+                    "endOffset": 16712
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 225,
+                    "startColumn": 4,
+                    "startOffset": 16717,
+                    "endLine": 234,
+                    "endColumn": 12,
+                    "endOffset": 17225
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 235,
+                    "startColumn": 4,
+                    "startOffset": 17230,
+                    "endLine": 244,
+                    "endColumn": 12,
+                    "endOffset": 17750
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 17755,
+                    "endLine": 254,
+                    "endColumn": 12,
+                    "endOffset": 18430
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 18435,
                     "endColumn": 56,
-                    "endOffset": 17606
+                    "endOffset": 18487
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 240,
-                        "startColumn": 4,
-                        "startOffset": 17554,
-                        "endColumn": 56,
-                        "endOffset": 17606
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 241,
+                    "startLine": 256,
                     "startColumn": 4,
-                    "startOffset": 17611,
+                    "startOffset": 18492,
                     "endColumn": 57,
-                    "endOffset": 17664
+                    "endOffset": 18545
                 },
                 "from": {
-                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
-                    "position": {
-                        "startLine": 241,
-                        "startColumn": 4,
-                        "startOffset": 17611,
-                        "endColumn": 57,
-                        "endOffset": 17664
-                    }
+                    "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml"
                 }
             }
         ]

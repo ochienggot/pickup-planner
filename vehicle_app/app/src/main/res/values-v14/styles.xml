@@ -16,5 +16,8 @@
     <!--<style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">-->
         <!--<item name="android:background">#00bfff</item>-->
     <!--</style>-->
-
+    <!-- Choice mode for list items -->
+    <style name="ListStyle">
+        <item name="android:choiceMode">singleChoice</item>
+    </style>
 </resources>

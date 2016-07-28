@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/ngot/Desktop/Project/app/src/main/res/menu/main.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/menu/parking_place_constraints.xml",
         "source": "/Users/ngot/Desktop/Project/app/src/main/res/menu/parking_place_constraints.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/ngot/Desktop/Project/app/src/main/res/menu/main.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/menu/parking_place_selection.xml",

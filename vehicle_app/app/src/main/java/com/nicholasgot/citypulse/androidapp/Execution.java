@@ -350,7 +350,7 @@ public class Execution extends Activity implements LocationListener {
 									"Error",
 									"Invalid message received from data federation component. The application will not display values for air quality index and average speed. The message is: "
 											+ statusEvent);
-					startActivity(errorIntent);
+//					startActivity(errorIntent);
 				}
 
 			}

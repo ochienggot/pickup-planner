@@ -31,7 +31,9 @@
         android:icon="@drawable/ericsson_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.nicholasgot.citypulse.androidapp.MainActivity" >
+        <activity
+            android:name="com.nicholasgot.citypulse.androidapp.MainActivity"
+            android:windowSoftInputMode="stateHidden" >
 
             <!-- android:icon="@drawable/ericsson_logo" -->
             <!-- android:label="" > -->
@@ -73,7 +75,12 @@
         <activity
             android:name="com.nicholasgot.citypulse.androidapp.TravelPlannerConstraintsActivity"
             android:icon="@drawable/project_icon"
-            android:label="" />
+            android:label=""
+            android:parentActivityName="com.nicholasgot.citypulse.androidapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicholasgot.citypulse.androidapp.MainActivity" />
+        </activity>
         <activity
             android:name="com.nicholasgot.citypulse.androidapp.ErrorPanel"
             android:icon="@drawable/project_icon"
@@ -86,11 +93,21 @@
         <activity
             android:name="com.nicholasgot.citypulse.androidapp.TravelPlannerRouteSelection"
             android:icon="@drawable/project_icon"
-            android:label="" />
+            android:label=""
+            android:parentActivityName="com.nicholasgot.citypulse.androidapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicholasgot.citypulse.androidapp.MainActivity" />
+        </activity>
         <activity
             android:name="com.nicholasgot.citypulse.androidapp.Execution"
             android:icon="@drawable/project_icon"
-            android:label="" />
+            android:label=""
+            android:parentActivityName="com.nicholasgot.citypulse.androidapp.TravelPlannerRouteSelection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicholasgot.citypulse.androidapp.TravelPlannerRouteSelection" />
+        </activity>
         <activity
             android:name="com.nicholasgot.citypulse.androidapp.ParkingPlaceSelectionActivity"
             android:icon="@drawable/project_icon"

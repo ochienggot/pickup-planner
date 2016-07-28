@@ -115,6 +115,8 @@ public class TravelPlannerActivity extends ListFragment implements
 
 	private AutoCompleteTextView endPointTextField;
 
+    private TextView mTravelPlannerStartingPoint;
+
 	private SupportMapFragment travelPlannerSupportMapFragment;
 	private GoogleMap map;
 
@@ -129,6 +131,8 @@ public class TravelPlannerActivity extends ListFragment implements
 
 	private Boolean locationAvailable;
     private boolean mFromDriver = false;
+
+    private static ListView mListView;
 
 	final static int PLACES = 0;
 	final static int PLACES_DETAILS = 1;
@@ -153,7 +157,7 @@ public class TravelPlannerActivity extends ListFragment implements
         super.onCreate(savedInstanceState);
 
         // TODO: activity lifecycle
-        mDb = new DatabaseConnection();
+        mDb = new DatabaseConnection(getContext());
         if (mLatLon.isEmpty()) {
             mDb.getVehicleTrips();
         }
@@ -188,8 +192,9 @@ public class TravelPlannerActivity extends ListFragment implements
                 }
 
                 itemsAdapter.notifyDataSetChanged();
-                final ListView listView = getListView();
-                listView.setVisibility(View.VISIBLE);
+                mListView.setVisibility(View.VISIBLE);
+                // Set the first pickup point
+                mListView.setItemChecked(0, true);
 
                 // TODO: handle exception case gracefully
                 // TODO: Transition from selected route back to the main activity (TONIGHT)
@@ -204,6 +209,8 @@ public class TravelPlannerActivity extends ListFragment implements
         });
 
         mNextPickupPoint = (TextView) travelPlannerView.findViewById(R.id.next_pickup_point);
+        mTravelPlannerStartingPoint = (TextView) travelPlannerView.findViewById(
+                R.id.travelPlannerStartingPointTextField);
 
         ImageButton fab = (ImageButton) travelPlannerView.findViewById(R.id.fab);
         fab.setOnClickListener(new OnClickListener() {
@@ -216,6 +223,9 @@ public class TravelPlannerActivity extends ListFragment implements
                 String location = (String) mNextPickupPoint.getText();
                 displayMarkerAtLocationAndZoomIn(getLocationFromString(location));
                 mDestinationPoint = false;
+
+                // Request focus on autocomplete text field
+                mTravelPlannerStartingPoint.requestFocus();
             }
         });
 
@@ -472,14 +482,22 @@ public class TravelPlannerActivity extends ListFragment implements
 		}
 
         // ADDED: Zoom into clicked location
-        final ListView listView = getListView();
-        listView.setVisibility(View.INVISIBLE);
-        listView.setOnItemClickListener(new OnItemClickListener() {
+        mListView = getListView();
+        mListView.setVisibility(View.INVISIBLE);
+        mListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = (String) listView.getItemAtPosition(position);
+                String item = (String) mListView.getItemAtPosition(position);
                 Toast.makeText(getContext(), item , Toast.LENGTH_SHORT).show();
                 displayMarkerAtLocationAndZoomIn(getLocationFromString(item));
+
+                mFromDriver = true;
+                mDestinationPoint = true;
+
+                endPointTextField.setText(mNextPickupPoint.getText());
+//                String location = (String) mNextPickupPoint.getText();
+//                displayMarkerAtLocationAndZoomIn(getLocationFromString(location));
+//                mDestinationPoint = false;
             }
         });
 	}
@@ -502,7 +520,12 @@ public class TravelPlannerActivity extends ListFragment implements
 	public void onResume() {
 		super.onResume();
 
-        mPickupPoints.clear();
+		// TODO: Handle better
+
+//        mPickupPoints.clear();
+        if (!mPickupPoints.isEmpty()) {
+            mNextPickupPoint.setText(mPickupPoints.get(mNextIndex));
+        }
 
 		locationAvailable = false;
 

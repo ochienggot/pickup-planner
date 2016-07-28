@@ -1,6 +1,11 @@
 package com.nicholasgot.citypulse.androidapp.common;
 
+import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
+import android.provider.ContactsContract;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.nicholasgot.citypulse.androidapp.TravelPlannerActivity;
 
@@ -23,14 +28,19 @@ import okhttp3.Response;
  * Connect to the database through web server
  */
 public class DatabaseConnection {
-    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
-//    public static final String LOCAL_HOST = "http://192.168.1.2:5000"; // home network
+//    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
+    public static final String LOCAL_HOST = "http://192.168.1.3:5000"; // home network
 //    public static final String LOCAL_HOST = "http://10.148.13.118:5000"; // Er Studio network
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static final String LOG_TAG = DatabaseConnection.class.getSimpleName();
 
     public static String mResponseData;
+    private Context mContext;
+
+    public DatabaseConnection(Context context) {
+        mContext = context;
+    }
 
     /**
      * Returns the vehicle trips in the DB
@@ -52,6 +62,14 @@ public class DatabaseConnection {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
+                Log.e(LOG_TAG, "Error connecting to the database");
+
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(mContext, "Error connecting to the database.", Toast.LENGTH_LONG).show();
+                    }
+                });
             }
 
             @Override
@@ -60,12 +78,13 @@ public class DatabaseConnection {
                 else {
                     String rowsSelected = response.body().string();
                     mResponseData = rowsSelected;
-//                    Log.v(LOG_TAG, "DB response: " + rowsSelected);
+                    Log.v(LOG_TAG, "DB response: " + rowsSelected);
                     TravelPlannerActivity.getLocationFromJson(rowsSelected);
                 }
             }
         });
     }
+
     /**
      * POSTs to the webservice endpoint
      * @param source source lat/lon pair

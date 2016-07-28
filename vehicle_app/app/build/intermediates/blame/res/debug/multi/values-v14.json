@@ -49,8 +49,29 @@
                     "startLine": 14,
                     "startColumn": 4,
                     "startOffset": 752,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 849
+                },
+                "from": {
+                    "file": "/Users/ngot/Desktop/Project/app/src/main/res/values-v14/styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 854,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 951
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 854,
                     "endColumn": 70,
-                    "endOffset": 818
+                    "endOffset": 920
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -65,11 +86,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 823,
+                    "startOffset": 925,
                     "endColumn": 82,
-                    "endOffset": 901
+                    "endOffset": 1003
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -84,12 +105,12 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 906,
-                    "endLine": 21,
+                    "startOffset": 1008,
+                    "endLine": 24,
                     "endColumn": 12,
-                    "endOffset": 1311
+                    "endOffset": 1413
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -105,12 +126,12 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1316,
-                    "endLine": 27,
+                    "startOffset": 1418,
+                    "endLine": 30,
                     "endColumn": 12,
-                    "endOffset": 1733
+                    "endOffset": 1835
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -126,11 +147,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1738,
+                    "startOffset": 1840,
                     "endColumn": 119,
-                    "endOffset": 1853
+                    "endOffset": 1955
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -145,11 +166,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1858,
+                    "startOffset": 1960,
                     "endColumn": 62,
-                    "endOffset": 1916
+                    "endOffset": 2018
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -164,12 +185,12 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 1921,
-                    "endLine": 32,
+                    "startOffset": 2023,
+                    "endLine": 35,
                     "endColumn": 12,
-                    "endOffset": 2070
+                    "endOffset": 2172
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -185,11 +206,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2075,
+                    "startOffset": 2177,
                     "endColumn": 62,
-                    "endOffset": 2133
+                    "endOffset": 2235
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",
@@ -204,11 +225,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2138,
+                    "startOffset": 2240,
                     "endColumn": 131,
-                    "endOffset": 2265
+                    "endOffset": 2367
                 },
                 "from": {
                     "file": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v14/values-v14.xml",

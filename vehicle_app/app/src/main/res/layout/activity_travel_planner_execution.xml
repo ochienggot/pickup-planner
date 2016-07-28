@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,20 +13,19 @@
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/executionPollutionStatus"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" />
 
     <!-- TODO: Remove, not using the data streams for air quality index and average speed -->
-    <TextView
-        android:id="@+id/executionPollutionStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/travelPlannerSelectionMap"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="62dp"
-        android:text="Air quality index:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <!--<TextView-->
+        <!--android:id="@+id/executionPollutionStatus"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@+id/travelPlannerSelectionMap"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="62dp"-->
+        <!--android:text="Air quality index:"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
 
     <TextView
         android:id="@+id/executionTrafficStatus"
@@ -38,4 +37,4 @@
         android:text="Average speed:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 <!---->
-</RelativeLayout>
+</LinearLayout>
