@@ -12,6 +12,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,12 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Set up support action toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setIcon(R.drawable.project_icon);
+        if (toolbar != null) {
+            toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+            toolbar.setTitle(R.string.title_main_activity);
+            setSupportActionBar(toolbar);
+        }
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setIcon(R.drawable.project_icon);
+        }
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {

@@ -16,6 +16,7 @@
     </string>
 
     <!-- Activity labels -->
+    <string name="title_main_activity">Pickup Planner</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_travel">Pickup Service</string>
     <string name="title_activity_events">Events</string>

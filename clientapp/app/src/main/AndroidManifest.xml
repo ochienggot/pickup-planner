@@ -24,6 +24,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
@@ -33,17 +34,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:theme="@style/AppTheme"
             android:name=".MainActivity"
             android:label="@string/app_name"/>
-
-
         <!--
             meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBskeUWMxUEPiGgJ4PsoYMTU1rSsD17d30" /
         -->
+
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"

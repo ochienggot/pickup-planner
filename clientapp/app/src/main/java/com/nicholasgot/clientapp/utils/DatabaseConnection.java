@@ -99,10 +99,19 @@ public class DatabaseConnection {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new IOException("Unexpected code " + response);
+                }
                 else {
-                    String rowsInserted = response.body().string();
-                    Log.v(LOG_TAG, "Rows inserted: " + rowsInserted);
+//                    String rowsInserted = response.body().string();
+//                    Log.v(LOG_TAG, "Rows inserted: " + rowsInserted);
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(mContext, "Request sent! You will receive a notification when your " +
+                                    "vehicle is ready", Toast.LENGTH_LONG).show();
+                        }
+                    });
                 }
             }
         });

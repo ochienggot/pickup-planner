@@ -35,24 +35,27 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/where_to_travel_text_view"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="16dp"
             android:textAppearance="?android:textAppearanceLarge"
             android:fontFamily="sans-serif-condensed"
-            android:textSize="24sp"
+            android:textSize="34sp"
             android:text="@string/where_to_travel" />
 
         <!-- TODO: Consider changing onClick behavior+radio buttons with list items + fragment -->
         <RadioGroup
-            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:orientation="vertical"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp" >
 
             <RadioButton
@@ -61,6 +64,7 @@
                 android:layout_height="50dp"
                 android:text="@string/travel"
                 android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="24sp"
                 android:fontFamily="sans-serif-light"
                 android:onClick="onRadioButtonClicked" />
 
@@ -70,6 +74,7 @@
                 android:layout_height="50dp"
                 android:text="@string/attend_event"
                 android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="24sp"
                 android:fontFamily="sans-serif-light"
                 android:onClick="onRadioButtonClicked" />
         </RadioGroup>

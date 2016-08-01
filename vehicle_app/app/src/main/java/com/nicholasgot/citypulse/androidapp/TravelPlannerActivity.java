@@ -495,9 +495,6 @@ public class TravelPlannerActivity extends ListFragment implements
                 mDestinationPoint = true;
 
                 endPointTextField.setText(mNextPickupPoint.getText());
-//                String location = (String) mNextPickupPoint.getText();
-//                displayMarkerAtLocationAndZoomIn(getLocationFromString(location));
-//                mDestinationPoint = false;
             }
         });
 	}
@@ -769,14 +766,10 @@ public class TravelPlannerActivity extends ListFragment implements
 					.icon(BitmapDescriptorFactory
 							.fromResource(R.drawable.user_position_marker)));
 
-            // TODO: When location changes, check the distance between the current user position and the next location
-            // TODO: If it exceeds some threshold, change the next location to visit
-//            Log.v(LOG_TAG, "Location index on location change: " + mNextIndex);
-
-			// TODO: load map of Sweden instead of the world
-            // TODO: migrate settings tab - done
-            String nextLocation = 0.0 + "/" + 0.0; // Placeholder
-            mNextPickupPoint.setText(nextLocation);
+            // Placeholder text for the next pickup location
+//            String NEXT_PICKUP_POINT = "Next pickup point";
+//            mNextPickupPoint.setText(NEXT_PICKUP_POINT);
+//            mNextPickupPoint.setText(mPickupPoints.get(mNextIndex));
 
 			map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
