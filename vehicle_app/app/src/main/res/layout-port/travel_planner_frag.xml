@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/load_textview"-->
+        <!--android:text="@string/tap_to_load"-->
+        <!--android:textAppearance="?android:textAppearanceLarge"-->
+        <!--android:fontFamily="sans-serif-condensed"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <Button
+        android:id="@+id/pickup_locations_button"
+        android:text="@string/load_pickup_locations"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_toEndOf="@+id/load_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        style="@style/ListStyle"
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/travelPlannerStartingPointTextField"
+        android:layout_below="@+id/pickup_locations_button"
+        android:layout_above="@+id/travelPlannerOKButton"
+        android:layout_toLeftOf="@+id/travelPlannerStartingPointTextField"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/next_pickup"
+        android:layout_below="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp">
+
+        <!--<TextView-->
+            <!--android:id="@+id/next_pickup_point_textview"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/next_pickup_point"-->
+            <!--android:textAppearance="?android:textAppearanceLarge"-->
+            <!--android:fontFamily="sans-serif-condensed"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingRight="8dp" />-->
+
+        <TextView
+            android:id="@+id/next_pickup_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_pickup_location"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif-condensed" />
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_directions_black_36dp"
+            android:layout_below="@+id/next_pickup_point"
+            android:contentDescription="@string/get_directions"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/travelPlannerStartingPointTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-light"
+        android:ems="14"
+        android:hint="@string/default_current_location_text"
+        android:inputType="textPostalAddress">
+        <!--<requestFocus />-->
+    </EditText>
+
+    <com.nicholasgot.citypulse.androidapp.autocompletetext.CustomAutoCompleteTextView
+        android:id="@+id/travelPlannerEndPointTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/travelPlannerStartingPointTextField"
+        android:layout_alignRight="@+id/travelPlannerStartingPointTextField"
+        android:layout_below="@+id/travelPlannerStartingPointTextField"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-light"
+        android:ems="10"
+        android:hint="@string/end_point_text"
+        android:inputType="textPostalAddress" />
+
+    <fragment
+        android:id="@+id/travelPlannerFragmentMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TravelPlannerConstraints"
+        android:layout_alignRight="@+id/travelPlannerEndPointTextField"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/travelPlannerEndPointTextField"
+        android:layout_marginTop="14dp"
+        tools:layout="@layout/list_item_text_view"
+        android:layout_alignLeft="@+id/travelPlannerEndPointTextField"
+        android:layout_alignStart="@+id/travelPlannerEndPointTextField" />
+
+    <Button
+        android:id="@+id/travelPlannerOKButton"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/travelPlannerFragmentMap"
+        android:layout_alignParentBottom="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/ok_button" />
+
+    <Button
+        android:id="@+id/TravelPlannerConstraints"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/travelPlannerFragmentMap"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/constraints_button" />
+</RelativeLayout>

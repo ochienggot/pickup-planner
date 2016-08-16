@@ -26,42 +26,27 @@ public class NetworkAndLocationServices {
             return false;
         }
 
-        ConnectivityManager conn = (ConnectivityManager) activity
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        if (conn != null && (
-                (conn.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() ==
-                        NetworkInfo.State.DISCONNECTED) &&
-                        (conn.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() ==
-                                NetworkInfo.State.DISCONNECTED ))) {
-
-            Toast.makeText(activity,
-                    "You are not connected to the internet. Please connect and try again.",
-                    Toast.LENGTH_LONG).show();
-            return false;
-        }
-        return true;
+        return isInternetSignal(activity);
     }
 
+    /**
+     * Check Internet connectivity status for mobile and WiFi
+     *
+     * @param activity containing activity
+     * @return true if either WiFi or mobile Internet is connected and false otherwise
+     */
     public static Boolean isInternetSignal(Activity activity) {
-
         ConnectivityManager conn = (ConnectivityManager) activity
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        NetworkInfo activeNetwork = conn.getActiveNetworkInfo();
-        boolean noWifi = activeNetwork.getType() != ConnectivityManager.TYPE_WIFI;
-        boolean noCellular = activeNetwork.getType() != ConnectivityManager.TYPE_MOBILE;
-        if (noWifi && noCellular) {
-//                (conn.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() ==
-//                        NetworkInfo.State.DISCONNECTED) &&
-//                        (conn.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() ==
-//                                NetworkInfo.State.DISCONNECTED ))) {
-
-            Toast.makeText(activity,
-                    "You are not connected to the internet. Please connect and try again.",
-                    Toast.LENGTH_LONG).show();
-            return false;
+        if (conn != null) {
+            NetworkInfo activeNetwork = conn.getActiveNetworkInfo();
+            if (activeNetwork != null) {
+                boolean wifiNetwork = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+                boolean mobileNetwork = activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE;
+                return wifiNetwork || mobileNetwork; // Take advantage of short-circuiting
+            }
         }
-        return true;
+        return false;
     }
 }

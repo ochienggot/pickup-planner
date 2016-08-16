@@ -17,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'GOOGLE_AUTOCOMPLETE__API_KEY', "\"AIzaSyBZnohTsdOvK3WEuS3C549ml43v48bG5YI\""
+    }
 
     packagingOptions {
         exclude 'AndroidManifest.xml'

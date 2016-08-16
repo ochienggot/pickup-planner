@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -36,12 +36,12 @@
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
@@ -68,12 +68,12 @@
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_big_media.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
@@ -88,12 +88,12 @@
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_multichoice_material.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
@@ -112,12 +112,12 @@
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/activity_travel_planner_route_selection.xml",
@@ -132,12 +132,12 @@
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_item.xml"
     },
     {
-        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_menu_layout.xml"
-    },
-    {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/ngot/Desktop/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/Users/ngot/Desktop/Project/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",

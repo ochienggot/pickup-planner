@@ -29,9 +29,7 @@ import okhttp3.Response;
  */
 public class DatabaseConnection {
 
-//    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
-    public static final String LOCAL_HOST = "http://192.168.1.3:5000"; // home network
-//    public static final String LOCAL_HOST = "http://10.148.13.118:5000"; // Er Studio network
+    public static final String HOST = Configs.HOST_ADDRESS + ":" + Configs.PORT;
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static final String LOG_TAG = DatabaseConnection.class.getSimpleName();
 
@@ -55,7 +53,7 @@ public class DatabaseConnection {
         final String REQUESTS = "requests";
 
         OkHttpClient client = new OkHttpClient();
-        HttpUrl.Builder urlBuilder = HttpUrl.parse(LOCAL_HOST).newBuilder();
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(HOST).newBuilder();
         urlBuilder.addPathSegment(CLIENT)
                 .addPathSegment(REQUESTS);
         String okUrl = urlBuilder.build().toString();
@@ -85,7 +83,6 @@ public class DatabaseConnection {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.e(LOG_TAG, "There was a problem.");
                 e.printStackTrace();
 
                 // Post to UI thread
@@ -108,11 +105,13 @@ public class DatabaseConnection {
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(mContext, "Request sent! You will receive a notification when your " +
-                                    "vehicle is ready", Toast.LENGTH_LONG).show();
+                            // Notification to user transferred to floating action button
+//                            Toast.makeText(mContext, "Request sent! You will receive a notification when your " +
+//                                    "vehicle is ready", Toast.LENGTH_LONG).show();
                         }
                     });
                 }
+                response.body().close();
             }
         });
     }

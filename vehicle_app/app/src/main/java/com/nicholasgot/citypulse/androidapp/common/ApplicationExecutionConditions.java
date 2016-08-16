@@ -5,9 +5,12 @@ import android.content.Context;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log;
 import android.widget.Toast;
 
 public class ApplicationExecutionConditions {
+
+    public static final String LOG_TAG = ApplicationExecutionConditions.class.getSimpleName();
 
 	public final static Boolean isGPSandInternetSignal(Activity activity) {
 
@@ -17,38 +20,26 @@ public class ApplicationExecutionConditions {
 		if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 			Toast.makeText(
 					activity,
-					"Your GPS seems to be disabled. Please enable it and try again.",
+					"GPS is disabled. Please enable it and try again.",
 					Toast.LENGTH_SHORT).show();
 			return false;
 		}
 
-		ConnectivityManager connec = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
-		
-		if (connec != null && (
-			    (connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.DISCONNECTED) &&
-			    (connec.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.DISCONNECTED ))) {            
-   
-			        Toast.makeText(activity, "You are not connected to the internet. Please connect and try again.", Toast.LENGTH_LONG).show();
-			        return false;
-			} 
-
-		return true;
-
+        return isInternetSignal(activity);
 	}
-	
-	
+
 	public final static Boolean isInternetSignal(Activity activity) {
 
-		ConnectivityManager connec = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
-		
-		if (connec != null && (
-			    (connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.DISCONNECTED) &&
-			    (connec.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.DISCONNECTED ))) {            
-   
-			        Toast.makeText(activity, "You are not connected to the internet. Please connect and try again.", Toast.LENGTH_LONG).show();
-			        return false;
-			} 
+		ConnectivityManager conn = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = conn.getActiveNetworkInfo();
+        if (activeNetwork != null) {
+            boolean wifiNetwork = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+            boolean mobileNetwork = activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE;
+            if (wifiNetwork || mobileNetwork) {
+                return true;
+            }
+        }
 
-		return true;
+		return false;
 	}
 }

@@ -1,2 +1,7 @@
-CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/MainActivity$override.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$SimpleGeolocationParserTask$1$override.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$override.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$SimpleGeolocationParserTask$override.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$SimpleGeolocationDownloadTask$override.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$AutocompleteGeoLocationParserTask$override.class
 CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/ngot/Desktop/Project/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/nicholasgot/citypulse/androidapp/TravelPlannerActivity$AutocompleteGeoLocationDownloadTask$override.class

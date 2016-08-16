@@ -11,7 +11,7 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 /**
- * Allows the user to pick time
+ * Allows the user to pick the time from TimePicker View
  */
 public class TimePickerFragment extends DialogFragment
         implements TimePickerDialog.OnTimeSetListener {
@@ -27,11 +27,13 @@ public class TimePickerFragment extends DialogFragment
         return new TimePickerDialog(getActivity(), this, hour, minute,
                 DateFormat.is24HourFormat(getActivity()));
     }
+
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Display the time picked
         TextView textView = (TextView) getActivity().findViewById(R.id.text_view_time);
-        String selectedTime = "Time constraint:  " + hourOfDay + "." + minute;
+        String SELECTED_TIME = "Time constraint: ";
+        String selectedTime = SELECTED_TIME + hourOfDay + "." + minute;
         textView.setText(selectedTime);
     }
 }

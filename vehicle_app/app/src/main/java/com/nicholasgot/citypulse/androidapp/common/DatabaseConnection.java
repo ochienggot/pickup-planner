@@ -1,6 +1,7 @@
 package com.nicholasgot.citypulse.androidapp.common;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.ContactsContract;
@@ -28,10 +29,8 @@ import okhttp3.Response;
  * Connect to the database through web server
  */
 public class DatabaseConnection {
-//    public static final String LOCAL_HOST = "http://213.159.185.35:5000"; // work network
-    public static final String LOCAL_HOST = "http://192.168.1.3:5000"; // home network
-//    public static final String LOCAL_HOST = "http://10.148.13.118:5000"; // Er Studio network
 
+    public static final String HOST = Configs.HOST_ADDRESS + ":" + Configs.PORT;
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static final String LOG_TAG = DatabaseConnection.class.getSimpleName();
 
@@ -43,14 +42,14 @@ public class DatabaseConnection {
     }
 
     /**
-     * Returns the vehicle trips in the DB
+     * Return vehicle trips
      */
     // TODO: flag to indicate the trip has been served; update DB with flag once chosen
     public void getVehicleTrips() {
 
         OkHttpClient client = new OkHttpClient();
-        HttpUrl.Builder urlBuilder = HttpUrl.parse(LOCAL_HOST).newBuilder();
-        urlBuilder.addPathSegment("clientapp")
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(HOST).newBuilder();
+        urlBuilder.addPathSegment("vehicleapp")
                 .addPathSegment("vehicle_trips");
         String okUrl = urlBuilder.build().toString();
 
@@ -93,7 +92,7 @@ public class DatabaseConnection {
     public void postLocation(String source, String destination) {
 
         OkHttpClient client = new OkHttpClient();
-        HttpUrl.Builder urlBuilder = HttpUrl.parse(LOCAL_HOST).newBuilder();
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(HOST).newBuilder();
         urlBuilder.addPathSegment("clientapp")
                 .addPathSegment("requests");
         String okUrl = urlBuilder.build().toString();

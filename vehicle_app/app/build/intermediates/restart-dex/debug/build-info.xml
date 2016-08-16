@@ -4,35 +4,40 @@
     api-level="21"
     density="xhdpi"
     format="7"
-    timestamp="1470042633522016000"
+    timestamp="1471352495359860000"
     token="-4322798795369240157" >
 
     <task
         name="javac"
-        duration="1541" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="144" />
+        duration="0" />
     <task
         name="verifier"
-        duration="25" />
+        duration="0" />
 
-    <artifact
-        location="/Users/ngot/Desktop/Project/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-        type="DEX" />
-
-    <build timestamp="1470041950562689000" >
+    <build timestamp="1471346684120374000" >
+        <artifact
+            location="/Users/ngot/Desktop/Project/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="1471349622275170000" >
+        <artifact
+            location="/Users/ngot/Desktop/Project/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="1471352413372265000" >
+        <artifact
+            location="/Users/ngot/Desktop/Project/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
         <artifact
             location="/Users/ngot/Desktop/Project/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="1470042633522016000" >
-        <artifact
-            location="/Users/ngot/Desktop/Project/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-    </build>
+    <build timestamp="1471352495359860000" />
 
 </instant-run>

@@ -110,7 +110,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceLarge"
             android:fontFamily="sans-serif-light" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +135,6 @@
             android:fontFamily="sans-serif-condensed"
             android:layout_marginLeft="8dp"
             android:text="@string/no_date_selected"/>
-
     </LinearLayout>
 
     <TextView
@@ -148,11 +146,11 @@
         android:fontFamily="sans-serif-condensed"
         android:onClick="showTimePickerDialog" />
 
-    <Button
-        android:id="@+id/submit_travel_request"
-        android:text="@string/submit_travel_request"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="sendRequestToDatabase"/>
+    <!--<Button-->
+        <!--android:id="@+id/submit_travel_request"-->
+        <!--android:text="@string/submit_travel_request"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="sendRequestToDatabase"/>-->
 </LinearLayout>

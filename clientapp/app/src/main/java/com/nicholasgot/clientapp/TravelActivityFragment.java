@@ -71,8 +71,6 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
     private AutoCompleteTextView endPointTextField;
     private AutocompleteGeoLocationDownloadTask placesDownloadTask;
     private AutocompleteGeoLocationDownloadTask placeDetailsDownloadTask;
-    private AutocompleteGeoLocationParserTask placesParserTask;
-    private AutocompleteGeoLocationParserTask placeDetailsParserTask;
 
     final static int PLACES = 0;
     final static int PLACES_DETAILS = 1;
@@ -435,11 +433,13 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
+            AutocompleteGeoLocationParserTask placesParserTask;
+            AutocompleteGeoLocationParserTask placeDetailsParserTask;
             switch (downloadType) {
                 case PLACES:
                     placesParserTask = new AutocompleteGeoLocationParserTask(PLACES);
 
-                    if (!result.equals(""))
+                    if (!result.isEmpty())
                         placesParserTask.execute(result);
                     else
                         System.out.println("The result is empty");
@@ -448,6 +448,7 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
                 case PLACES_DETAILS:
                     placeDetailsParserTask = new AutocompleteGeoLocationParserTask(PLACES_DETAILS);
                     placeDetailsParserTask.execute(result);
+                    break;
             }
         }
     }
@@ -549,12 +550,12 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
 
         @Override
         protected void onPostExecute(List<HashMap<String, String>> list) {
-
             responseList = list;
             if (responseList != null) {
                 locations = new ArrayList<>();
+                String FORMATTED_ADDRESS = "formatted_address";
                 for (HashMap<String, String> item : responseList) {
-                    locations.add(item.get("formatted_address"));
+                    locations.add(item.get(FORMATTED_ADDRESS));
                 }
 
                 if (locations.size() == 0) {
@@ -613,7 +614,7 @@ public class TravelActivityFragment extends Fragment implements GoogleApiClient.
                 }
             } else {
                 Toast.makeText(getActivity(),
-                    "Unable to suggest any location. Check internet connection.",
+                    "Unable to suggest any location. Check your Internet connection.",
                     Toast.LENGTH_SHORT).show();
             }
         }

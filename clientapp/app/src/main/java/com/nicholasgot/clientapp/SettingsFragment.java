@@ -11,7 +11,6 @@ import android.support.v4.app.Fragment;
  */
 public class SettingsFragment extends PreferenceFragment {
 
-
     public SettingsFragment() {
         // Required empty public constructor
     }

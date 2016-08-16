@@ -17,16 +17,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.nicholasgot.clientapp.utils.DatabaseConnection;
 import com.nicholasgot.clientapp.utils.GeocodeLocationTask;
+import com.nicholasgot.clientapp.utils.NetworkAndLocationServices;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,6 +48,13 @@ public class TravelActivity extends AppCompatActivity {
 
     private static Map<String, LatLng> locations = new HashMap<>();
 
+    private enum TimeSelected {
+        SELECTED,
+        NOT_SELECTED
+    };
+    private TimeSelected mTimePicked;
+    private TextView mDateTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,27 +62,10 @@ public class TravelActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // TODO: program in terms of the problem domain, not the low-level implementation detail
-//        mEditText = (EditText) findViewById(R.id.user_location_edit_text);
-//        mEditText.setOnEditorActionListener(new EditText.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-//                if (actionId == EditorInfo.IME_ACTION_DONE) {
-//                    Toast.makeText(getApplicationContext(), "Pickup location entered.", Toast.LENGTH_SHORT).show();
-//
-//                    String locationPref = mEditText.getText().toString(); // Heed compiler warnings always!
-//                    if (locationPref.equals(MY_LOCATION)) sourceLocation = DEFAULT_LOCATION;
-//                    else sourceLocation = locationPref;
-//                    geoCodeLocation(sourceLocation);
-//
-//                    return true;
-//                }
-//                else {
-//                    geoCodeLocation(DEFAULT_LOCATION);
-//                    return true;
-//                }
-//            }
-//        });
+        // Initialize time selection
+        mTimePicked = TimeSelected.NOT_SELECTED;
+
+        mDateTextView = (TextView) findViewById(R.id.text_view_time);
 
         mSpinner = (Spinner) findViewById(R.id.events_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item);
@@ -90,13 +84,18 @@ public class TravelActivity extends AppCompatActivity {
             }
         });
 
+        // TODO: remove this
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Snackbar.make(view, "Request sent; Your bus comes in x minutes", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+//                    Snackbar.make(view, "Request sent; Your bus comes in x minutes", Snackbar.LENGTH_LONG)
+//                            .setAction("Action", null).show();
+                    if (sendRequestToDatabase()) {
+                        Snackbar.make(view, "Request sent! You will receive a notification when your " +
+                                "vehicle is ready", Snackbar.LENGTH_LONG).show();
+                    }
                 }
             });
         }
@@ -201,6 +200,7 @@ public class TravelActivity extends AppCompatActivity {
      * Calls fragment defined to allow the user to pick the time
      */
     public void showTimePickerDialog(View view) {
+        mTimePicked = TimeSelected.SELECTED;
         TimePickerFragment timePickerFragment = new TimePickerFragment();
         timePickerFragment.show(getFragmentManager(), "timePicker");
 
@@ -238,31 +238,45 @@ public class TravelActivity extends AppCompatActivity {
     /**
      * Write travel request to database
      */
-    public void sendRequestToDatabase(View view) {
+    public boolean sendRequestToDatabase() {
         if (locations != null) {
-            postRequestToDatabase();
+            // Use current time in the absence of date selection
+            if (mTimePicked == TimeSelected.NOT_SELECTED) {
+                String currentDate = DateFormat.getDateTimeInstance().format(new Date());
+                mDateTextView.setText(currentDate);
+            }
+            return postRequestToDatabase();
         }
         else {
             Log.e(LOG_TAG, "Null location from Geocoding API.");
+            return false;
         }
     }
 
     /**
      * Send to the database
      */
-    protected void postRequestToDatabase() {
+    protected boolean postRequestToDatabase() {
         DatabaseConnection db = new DatabaseConnection(this);
-//        LatLng src = locations.get(sourceLocation);
         LatLng dst = locations.get(destLocation);
         LatLng src = TravelActivityFragment.destinationPoint;
 
-        if (src == null || dst == null) {
-            Toast.makeText(this, "Error in Geocoding Pickup/destination location.", Toast.LENGTH_LONG).show();
-            return;
+        if (!NetworkAndLocationServices.isInternetSignal(this)) {
+            Toast.makeText(this,
+                    "You are not connected to the Internet. Please connect and try again.",
+                    Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        // Empty pickup location
+        if (src == null) {
+            Toast.makeText(this, "Please enter a pickup location", Toast.LENGTH_LONG).show();
+            return false;
         }
 
         String source = "(" + src.latitude + "," + src.longitude + ")";
         String destination = "(" + dst.latitude + "," + dst.longitude + ")";
         db.postLocation(source, destination);
+        return true;
     }
 }

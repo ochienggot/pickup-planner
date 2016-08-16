@@ -3,7 +3,7 @@
 
     <string name="app_name">Vehicle app</string>
     <string name="action_settings">Settings</string>
-    <string name="default_current_location_text">Default current location</string>
+    <string name="default_current_location_text">Default: current location</string>
     <string name="ok_button">OK</string>
     <string name="constraints_button">Constraints</string>
     <string name="cancel_button">Cancel</string>
@@ -32,15 +32,15 @@
     <string name="next_pickup_point">Next location: </string>
     <string name="next_pickup_location">Next pickup location</string>
     <string name="pickup_locations">Load</string>
-    <string name="tap_to_load">Tap \"Load\" to retrieve vehicle trips</string>
+    <string name="load_pickup_locations">Tap to request trip</string>
+    <string name="tap_to_load">Tap \"Load\" to retrieve vehicle trip</string>
+    <string name="get_directions">Find directions to the location</string>
+
+    <!-- Settings strings -->
     <string name="pref_latency">Latency (ms)</string>
     <string name="pref_price">Price (euro)</string>
     <string name="pref_security_level">Security level</string>
     <string name="pref_accuracy">Accuracy %</string>
     <string name="pref_completeness">Completeness %</string>
     <string name="pref_bandwidth">Bandwidth (msg/s)</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

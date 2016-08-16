@@ -103,6 +103,20 @@ public class TravelPlannerActivity extends ListFragment implements
 
     private static final String LOG_TAG = TravelPlannerActivity.class.getSimpleName();
 
+    private static final String SHORTEST = "shortest";
+    private static final String FASTEST = "fastest";
+    private static final String CLEANER = "cleaner";
+    private static final String FASTEST_CHECKBOX = "fastestCheckBox";
+    private static final String SHORTEST_CHECKBOX = "shortestCheckBox";
+    private static final String CLEANER_CHECKBOX = "cleanerCheckBox";
+    private static final String ROUTE_CONSTRAINTS_PREFERENCES = "routeConstraintsPreferences";
+    private static final String MY_LOCATION = "My location";
+    private static final String DESTINATION_POINT = "Destination Point";
+    private static final String PARKING_PLACE = "Parking Place";
+    private static final String POINT_OF_INTEREST = "Point of Interest";
+    private static final String SETTINGS_PREFERENCES = "SettingsPreferences";
+    private static final String SERVER_LOCATION = "serverLocation";
+
 	private LatLng destinationPoint = null;
 
 	private LatLng interestPoint = null;
@@ -179,7 +193,7 @@ public class TravelPlannerActivity extends ListFragment implements
                 R.layout.list_item_text_view, mPickupPoints);
         setListAdapter(itemsAdapter);
 
-        Button loadButton = (Button) travelPlannerView.findViewById(R.id.pickup_locations_list);
+        Button loadButton = (Button) travelPlannerView.findViewById(R.id.pickup_locations_button);
         loadButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -197,8 +211,13 @@ public class TravelPlannerActivity extends ListFragment implements
                 mListView.setItemChecked(0, true);
 
                 // TODO: handle exception case gracefully
-                // TODO: Transition from selected route back to the main activity (TONIGHT)
-                final String INVALID_DESTINATION = "Undefined";
+                if (!ApplicationExecutionConditions.isInternetSignal(getActivity())) {
+                    Toast.makeText(getActivity(),
+                            "You are not connected to the Internet. Please connect and try again.",
+                            Toast.LENGTH_LONG).show();
+                }
+
+                final String INVALID_DESTINATION = "Undefined location";
                 if (mPickupPoints.isEmpty()) {
                     mNextPickupPoint.setText(INVALID_DESTINATION);
                 }
@@ -243,7 +262,6 @@ public class TravelPlannerActivity extends ListFragment implements
 						startActivityForResult(
 								intent,
 								DefaultValues.TRAVEL_PLANNER_CONSTRAINTS_REQUEST_CODE);
-
 					}
 				});
 
@@ -280,7 +298,7 @@ public class TravelPlannerActivity extends ListFragment implements
 				sendMessageTask.execute();
 				
 				Toast.makeText(getActivity(),
-						"Please wait until the system computes the best routes to travel.",
+						"Please wait as the system computes the best travel routes.",
 						Toast.LENGTH_LONG).show();
 			}
 		});
@@ -417,7 +435,7 @@ public class TravelPlannerActivity extends ListFragment implements
 						requestBundle.getString(Execution.INTEREST_POINT),
 						LatLng.class);
 
-				char[] initialText = ("Parking place: " + destinationPoint
+				char[] initialText = (PARKING_PLACE + destinationPoint
 						.toString()).toCharArray();
 
 				endPointTextField.setText(initialText, 0, initialText.length);
@@ -425,11 +443,11 @@ public class TravelPlannerActivity extends ListFragment implements
 				if (destinationPoint != null)
 					map.addMarker(new MarkerOptions()
 							.position(destinationPoint).title(
-									"Destination point"));
+									DESTINATION_POINT));
 
 				if (interestPoint != null) {
 					map.addMarker(new MarkerOptions()
-							.title("Point of interest")
+							.title(POINT_OF_INTEREST)
 							.position(interestPoint)
 							.icon(BitmapDescriptorFactory
 									.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
@@ -481,7 +499,7 @@ public class TravelPlannerActivity extends ListFragment implements
 							travelPlannerSupportMapFragment).commit();
 		}
 
-        // ADDED: Zoom into clicked location
+        // Zoom into clicked location
         mListView = getListView();
         mListView.setVisibility(View.INVISIBLE);
         mListView.setOnItemClickListener(new OnItemClickListener() {
@@ -493,7 +511,6 @@ public class TravelPlannerActivity extends ListFragment implements
 
                 mFromDriver = true;
                 mDestinationPoint = true;
-
                 endPointTextField.setText(mNextPickupPoint.getText());
             }
         });
@@ -501,7 +518,7 @@ public class TravelPlannerActivity extends ListFragment implements
 
     /**
      * finds the lat/lng pair corresponding to an address
-     * @param address
+     * @param address corresponding to this location
      * @return lat/lng
      */
     private LatLng getLocationFromString(String address) {
@@ -518,8 +535,6 @@ public class TravelPlannerActivity extends ListFragment implements
 		super.onResume();
 
 		// TODO: Handle better
-
-//        mPickupPoints.clear();
         if (!mPickupPoints.isEmpty()) {
             mNextPickupPoint.setText(mPickupPoints.get(mNextIndex));
         }
@@ -535,11 +550,10 @@ public class TravelPlannerActivity extends ListFragment implements
 		if (requestCode == DefaultValues.TRAVEL_PLANNER_CONSTRAINTS_REQUEST_CODE) {
 
 			if (resultCode == TravelPlannerConstraintsActivity.RESULT_OK) {
-
 				Bundle extras = data.getExtras();
-				Boolean shortest = extras.getBoolean("shortest");
-				Boolean fastest = extras.getBoolean("fastest");
-				Boolean cleaner = extras.getBoolean("cleaner");
+				Boolean shortest = extras.getBoolean(SHORTEST);
+				Boolean fastest = extras.getBoolean(FASTEST);
+				Boolean cleaner = extras.getBoolean(CLEANER);
 				Toast.makeText(
 						getActivity(),
 						"Cheapest: " + shortest + "\n Shortest Walk: "
@@ -595,22 +609,21 @@ public class TravelPlannerActivity extends ListFragment implements
 		FunctionalPreferences requestFunctionalPreferences = new FunctionalPreferences();
 
 		SharedPreferences routeConstraintsPreferences = getActivity()
-				.getSharedPreferences("RouteConstraintsPreferences",
+				.getSharedPreferences(ROUTE_CONSTRAINTS_PREFERENCES,
 						getActivity().MODE_PRIVATE);
 
         // TODO: find how best to use shared preferences
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String pref1 = sharedPref.getString("pref_security_level", "7");
 
 		final Editor routeConstraintsEditor = routeConstraintsPreferences
 				.edit();
 
 		boolean fastestRestoredRestoredCheckBox = routeConstraintsPreferences
-				.getBoolean("fastestCheckBox", false);
+				.getBoolean(FASTEST_CHECKBOX, false);
 		boolean shortestRestoredCheckBox = routeConstraintsPreferences
-				.getBoolean("shortestCheckBox", false);
+				.getBoolean(SHORTEST_CHECKBOX, false);
 		boolean cleanerRestoredCheckBox = routeConstraintsPreferences
-				.getBoolean("cleanerCheckBox", false);
+				.getBoolean(CLEANER_CHECKBOX, false);
 
 		if (fastestRestoredRestoredCheckBox)
 			requestFunctionalPreferences
@@ -642,7 +655,6 @@ public class TravelPlannerActivity extends ListFragment implements
 		builder.registerTypeAdapter(FunctionalConstraintValue.class,
 				new FunctionalConstraintValueAdapter());
 		builder.registerTypeAdapter(Answer.class, new AnswerAdapter());
-
 		Gson gson = builder.create();
 
 		return gson.toJson(reasoningRequest);
@@ -657,12 +669,12 @@ public class TravelPlannerActivity extends ListFragment implements
 			routeReasoningRequest = generateTravelPlannerRequest();
 
 			SharedPreferences settingsPreferences = getActivity()
-					.getSharedPreferences("SettingsPreferences",
+					.getSharedPreferences(SETTINGS_PREFERENCES,
 							Context.MODE_PRIVATE);
 
 			String requestEndpoint = DefaultValues.getEndPointForIP(
 					DefaultValues.REASONING_REQUEST_WEB_SOCKET_END_POINT,
-					settingsPreferences.getString("serverLocation",
+					settingsPreferences.getString(SERVER_LOCATION,
 							DefaultValues.WEB_SOCKET_SERVER_IP));
 
 			System.out
@@ -690,7 +702,7 @@ public class TravelPlannerActivity extends ListFragment implements
 
 				intent.putExtra(
 						"Error",
-						"The route recomendation message is null. Please check if "
+						"The route recommendation message is null. Please check if "
 								+ "the IP of the CityPulse framework is correct (in Settings tab) and if "
 								+ "the decisions support component is running. The current decision "
 								+ "support endpoint is " + requestEndpoint);
@@ -701,7 +713,6 @@ public class TravelPlannerActivity extends ListFragment implements
 						.println("The decision support provided an empty answer.");
 
 				Intent intent = new Intent(getActivity(), ErrorPanel.class);
-
 				intent.putExtra(
 						"Error",
 						"The decision support component is working but is not able to provide a recomendation. The current decision "
@@ -711,7 +722,6 @@ public class TravelPlannerActivity extends ListFragment implements
 			} else {
 
 				System.out.println("Start");
-
 				Intent intent = new Intent(getActivity(),
 						TravelPlannerRouteSelection.class);
 
@@ -734,9 +744,9 @@ public class TravelPlannerActivity extends ListFragment implements
 						routeReasoningRequest);
 
 				if (routeReasoningResponse.equals("{\"answers\":[]}")) {
-					System.out.println("true");
+					System.out.println(Boolean.TRUE);
 				} else {
-					System.out.println("false");
+					System.out.println(Boolean.FALSE);
 
 					intent.putExtra(Execution.EXECUTION_DETAILS, requestBundle);
 					startActivity(intent);
@@ -753,29 +763,21 @@ public class TravelPlannerActivity extends ListFragment implements
 	@Override
 	public void onLocationChanged(Location location) {
 		lastLocation = location;
-
 		LatLng latLng = new LatLng(location.getLatitude(),
 				location.getLongitude());
 
 		if (!locationAvailable) {
 			map.clear();
-
 			userPositionMarker = map.addMarker(new MarkerOptions()
 					.position(latLng)
-					.title("my position")
+					.title(MY_LOCATION)
 					.icon(BitmapDescriptorFactory
 							.fromResource(R.drawable.user_position_marker)));
-
-            // Placeholder text for the next pickup location
-//            String NEXT_PICKUP_POINT = "Next pickup point";
-//            mNextPickupPoint.setText(NEXT_PICKUP_POINT);
-//            mNextPickupPoint.setText(mPickupPoints.get(mNextIndex));
-
 			map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
 			if (destinationPoint != null)
 				map.addMarker(new MarkerOptions().position(destinationPoint)
-						.title("Destination point"));
+						.title(DESTINATION_POINT));
 
 		} else {
 			userPositionMarker.setPosition(latLng);
@@ -877,7 +879,8 @@ public class TravelPlannerActivity extends ListFragment implements
 	private String getAutoCompleteUrl(String place) {
 
 		// Obtain browser key from https://code.google.com/apis/console
-		String key = "key=AIzaSyBZnohTsdOvK3WEuS3C549ml43v48bG5YI";
+//		String key = "key=AIzaSyBZnohTsdOvK3WEuS3C549ml43v48bG5YI";
+        String KEY = "key=";
 
 		// place to be be searched
 		String input = "input=" + place;
@@ -889,7 +892,8 @@ public class TravelPlannerActivity extends ListFragment implements
 		String sensor = "sensor=false";
 
 		// Building the parameters to the web service
-		String parameters = input + "&" + types + "&" + sensor + "&" + key;
+		String parameters = input + "&" + types + "&" + sensor + "&" +
+                KEY + BuildConfig.GOOGLE_AUTOCOMPLETE__API_KEY;
 
 		// Output format
 		String output = "json";
@@ -904,23 +908,24 @@ public class TravelPlannerActivity extends ListFragment implements
 	private String getPlaceDetailsUrl(String ref) {
 
 		// Obtain browser key from https://code.google.com/apis/console
-		String key = "key=AIzaSyBZnohTsdOvK3WEuS3C549ml43v48bG5YI";
+//		String key = "key=AIzaSyBZnohTsdOvK3WEuS3C549ml43v48bG5YI";
+        String KEY = "key=";
 
 		// reference of place
-		String reference = "reference=" + ref;
+		String REFERENCE = "reference=" + ref;
 
 		// Sensor enabled
-		String sensor = "sensor=false";
+		String SENSOR = "sensor=false";
 
 		// Building the parameters to the web service
-		String parameters = reference + "&" + sensor + "&" + key;
+		String parameters = REFERENCE + "&" + SENSOR + "&" + KEY + BuildConfig.GOOGLE_AUTOCOMPLETE__API_KEY;
 
 		// Output format
-		String output = "json";
+		String OUTPUT = "json";
 
 		// Building the url to the web service
 		String url = "https://maps.googleapis.com/maps/api/place/details/"
-				+ output + "?" + parameters;
+				+ OUTPUT + "?" + parameters;
 
 		return url;
 	}
@@ -1096,30 +1101,32 @@ public class TravelPlannerActivity extends ListFragment implements
 			if (responseList != null) {
 
 				locations = new ArrayList<String>();
+                String FORMATTED_ADDRESS = "formatted_address";
 
 				for (HashMap<String, String> item : responseList) {
 
-					locations.add(item.get("formatted_address"));
+					locations.add(item.get(FORMATTED_ADDRESS));
 				}
 
 				if (locations.size() == 0) {
 					Toast.makeText(getActivity(),
-							"No result found. Please make another selection",
+							"No results found. Please make another selection",
 							Toast.LENGTH_SHORT).show();
 
 				} else if (locations.size() == 1) {
 
 					char[] location = locations.get(0).toCharArray();
-
 					endPointTextField.setText(location, 0, location.length);
 
 					// Getting latitude from the parsed data
+                    String LATITUDE = "lat";
+                    String LONGITUDE = "lng";
 					double endPointLatitude = Double.parseDouble(responseList
-							.get(0).get("lat"));
+							.get(0).get(LATITUDE));
 
 					// Getting longitude from the parsed data
 					double endPointLongitude = Double.parseDouble(responseList
-							.get(0).get("lng"));
+							.get(0).get(LONGITUDE));
 
 					destinationPoint = new LatLng(endPointLatitude,
 							endPointLongitude);
@@ -1146,21 +1153,21 @@ public class TravelPlannerActivity extends ListFragment implements
 									endPointTextField.setText(location, 0,
 											location.length);
 
-									// Getting latitude from the parsed data
+									// Get latitude and longitude from the parsed data
+                                    String LATITUDE = "lat";
+                                    String LONGITUDE = "lng";
 									double endPointLatitude = Double
 											.parseDouble(responseList
-													.get(which).get("lat"));
+													.get(which).get(LATITUDE));
 
-									// Getting longitude from the parsed data
 									double endPointLongitude = Double
 											.parseDouble(responseList
-													.get(which).get("lng"));
+													.get(which).get(LONGITUDE));
 
 									destinationPoint = new LatLng(
 											endPointLatitude, endPointLongitude);
 
 									displayMarkerAtLocationAndZoomIn(destinationPoint);
-
 								}
 							});
 					builder.show();
@@ -1211,8 +1218,9 @@ public class TravelPlannerActivity extends ListFragment implements
     public static void getLocationFromJson(String responseData) {
 
         try {
+            String VEHICLE_TRIPS = "vehicle_trips";
             JSONObject jsonObject = new JSONObject(responseData);
-            JSONArray jsonArray1 = jsonObject.getJSONArray("vehicle_trips");
+            JSONArray jsonArray1 = jsonObject.getJSONArray(VEHICLE_TRIPS);
             JSONArray jsonArray = jsonArray1.getJSONArray(0);
 
             if (jsonArray != null) {
@@ -1256,10 +1264,6 @@ public class TravelPlannerActivity extends ListFragment implements
             String locationAddress = address.substring(0, address.length() - LEN_COUNTRY);
             mTravelerLocations.put(location, locationAddress);
 
-            // place in pickup points array too
-//            pickupPoints.add(locationAddress);
-//            Log.v(LOG_TAG, "Adding..." + locationAddress);
-
         } catch (JSONException je) {
             Log.e(LOG_TAG, "Json exception: " + je);
         }
@@ -1286,7 +1290,7 @@ public class TravelPlannerActivity extends ListFragment implements
             currLocation.setLatitude(currPoint.longitude);
         }
         else {
-            Log.e(LOG_TAG, "Null currPoint");
+            Log.e(LOG_TAG, "Null current location.");
         }
 
         Location nextLocation = new Location("");
